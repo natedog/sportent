@@ -1,0 +1,12 @@
+<h1>Editing sport</h1>
+
+
+
+
+<% semantic_form_for @sport do |form| %>
+  <%= form.inputs %>
+  <%= form.buttons %>
+<% end %>
+
+<%= link_to 'Show', @sport %> |
+<%= link_to 'Back', sports_path %>
