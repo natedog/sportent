@@ -2,8 +2,15 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :stories
 
   map.resources :sports
+  map.resources :rssfeeds, :member => { :fetch => :get }
 
-  map.resources :rssfeeds
+  
+  map.namespace(:admin) do |admin|
+    admin.resources :stories
+    admin.resources :rssfeeds
+      map.resources :sports
+    
+  end  
 
   # The priority is based upon order of creation: first created -> highest priority.
 

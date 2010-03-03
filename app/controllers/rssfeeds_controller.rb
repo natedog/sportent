@@ -38,10 +38,11 @@ class RssfeedsController < ApplicationController
     # render params.inspect
      stories_to_save = params[:rssfeed][:urls]
       
-     stories_to_save.each do |s|
+     stories_to_save.each do |story_url|
         stories.each do |story|
-          if story.url == s 
-              Story.create({:url=>story.url,:summary=>story.description,:title=>story.title })
+          if story.url == story_url 
+              s = Story.new({:url=>story.url,:summary=>story.description,:title=>story.title })
+              s.save
               #render "save me"
           end  
         end  

@@ -1,21 +1,29 @@
-<h1>Listing stories</h1>
 
-<table>
-  <tr>
-  </tr>
+
+
 
 <% @stories.each do |story| %>
-  <tr>
-	<td><%= story.url %></td>
-	<td><%= story.title %></td>
-	<td><%= story.summary %></td>
-    <td><%= link_to 'Show', story %></td>
-    <td><%= link_to 'Edit', edit_story_path(story) %></td>
-    <td><%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <div class="story">
+		
+		<div class="details">
+
+			
+			<h2><a href="/story/<%=story.id%>" target="_blank"><%= story.title %></a></h2>
+			<p><%= story.summary %></p>
+    		<div class="social_tags">Social Tags</div>
+			<div class="socail_opinion">Opinion</div>
+			<div class="scorecastr">Pick the Score</div>
+		</div>
+		
+		<div class="odds">
+				team a v team b some odds
+		</div>
+		
+				
+		
+  </div>
 <% end %>
-</table>
+
 
 <br />
 
-<%= link_to 'New story', new_story_path %>

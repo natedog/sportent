@@ -1472,3 +1472,1245 @@ Processing StoriesController#index (for 127.0.0.1 at 2010-02-26 22:18:34) [GET]
 Rendering template within layouts/stories
 Rendering stories/index
 Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/stories]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRssfeeds (20100226081701)
+Migrating to CreateSports (20100226081850)
+Migrating to CreateStories (20100226081930)
+Migrating to AddSportToStory (20100303053920)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: no such table: story: ALTER TABLE "story" ADD "sport_id" integer[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRssfeeds (20100226081701)
+Migrating to CreateSports (20100226081850)
+Migrating to CreateStories (20100226081930)
+Migrating to AddSportToStory (20100303053920)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "stories" ADD "sport_id" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100303053920')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("rssfeeds")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("sports")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("stories")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRssfeeds (20100226081701)
+Migrating to CreateSports (20100226081850)
+Migrating to CreateStories (20100226081930)
+Migrating to AddSportToStory (20100303053920)
+Migrating to AddAdditonalColumnsStories (20100303054735)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "stories" ADD "accepted" boolean[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "stories" ADD "published" boolean[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "stories" ADD "source" integer[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "stories" ADD "source_type" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "stories" ADD "published_at" datetime[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "stories" ADD "accepted_at" datetime[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100303054735')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("rssfeeds")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("sports")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("stories")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-03 16:53:13) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 16:53:23) [GET]
+  [4;36;1mRssfeed Load (0.7ms)[0m   [0;1mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/rssfeeds
+Rendering rssfeeds/index
+  [4;35;1mSport Load (0.4ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 157ms (View: 71, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#new (for 127.0.0.1 at 2010-03-03 16:53:31) [GET]
+Rendering template within layouts/rssfeeds
+Rendering rssfeeds/new
+  [4;36;1mSport Load (0.4ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Completed in 39ms (View: 31, DB: 0) | 200 OK [http://localhost/rssfeeds/new]
+
+
+Processing RssfeedsController#show (for 127.0.0.1 at 2010-03-03 16:53:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mRssfeed Load (0.3ms)[0m   [0mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 1) [0m
+Rendering template within layouts/rssfeeds
+Rendering rssfeeds/show
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/rssfeeds/1]
+
+
+Processing RssfeedsController#fetch (for 127.0.0.1 at 2010-03-03 16:54:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRssfeed Load (0.3ms)[0m   [0;1mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 1) [0m
+Rendering template within layouts/rssfeeds
+Rendering rssfeeds/fetch
+Completed in 1093ms (View: 15, DB: 0) | 200 OK [http://localhost/rssfeeds/fetch/1]
+
+
+Processing RssfeedsController#save_stories (for 127.0.0.1 at 2010-03-03 16:56:22) [PUT]
+  Parameters: {"commit"=>"Save Stories", "authenticity_token"=>"axwJYP5Fc3psQqcUHII0ex5CGD1vv0pZUrb+YEDKNEI=", "id"=>"1", "rssfeed"=>{"urls"=>["http://www.premierleague.com/page/Headlines/0,,12306~1981252,00.html", "http://www.premierleague.com/page/Headlines/0,,12306~1981280,00.html"]}}
+  [4;35;1mRssfeed Load (0.4ms)[0m   [0mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 1) [0m
+  [4;36;1mStory Create (0.4ms)[0m   [0;1mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 05:56:23', 'Neville''s future on hold', NULL, 'http://www.premierleague.com/page/Headlines/0,,12306~1981252,00.html', 'Manchester United defender Gary Neville has shelved all thoughts about his future until the end of the season.', NULL, NULL, NULL, NULL, '2010-03-03 05:56:23')[0m
+  [4;35;1mStory Create (0.5ms)[0m   [0mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 05:56:23', 'Torres return a boost for Benitez', NULL, 'http://www.premierleague.com/page/Headlines/0,,12306~1981280,00.html', 'Liverpool''s Rafael Benitez says Fernando Torres'' return is like signing a new player for the final matches of the season.', NULL, NULL, NULL, NULL, '2010-03-03 05:56:23')[0m
+
+ActionView::MissingTemplate (Missing template rssfeeds/save_stories.erb in view path app/views):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 16:56:33) [GET]
+  [4;36;1mStory Load (1.0ms)[0m   [0;1mSELECT * FROM "stories" [0m
+Rendering template within layouts/stories
+Rendering stories/index
+Completed in 120ms (View: 114, DB: 1) | 200 OK [http://localhost/stories]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 16:58:40) [GET]
+  [4;35;1mRssfeed Load (0.5ms)[0m   [0mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/rssfeeds
+Rendering rssfeeds/index
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-03 16:58:46) [GET]
+
+ActionController::RoutingError (No route matches "/sport" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SportsController#index (for 127.0.0.1 at 2010-03-03 16:58:50) [GET]
+  [4;35;1mSport Load (0.5ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/sports
+Rendering sports/index
+Completed in 26ms (View: 20, DB: 0) | 200 OK [http://localhost/sports]
+
+
+Processing SportsController#new (for 127.0.0.1 at 2010-03-03 16:58:52) [GET]
+Rendering template within layouts/sports
+Rendering sports/new
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/sports/new]
+
+
+Processing SportsController#create (for 127.0.0.1 at 2010-03-03 16:59:01) [POST]
+  Parameters: {"commit"=>"Create Sport", "authenticity_token"=>"axwJYP5Fc3psQqcUHII0ex5CGD1vv0pZUrb+YEDKNEI=", "sport"=>{"name"=>"Cricket"}}
+  [4;36;1mSport Create (0.4ms)[0m   [0;1mINSERT INTO "sports" ("name", "updated_at", "parent_id", "created_at") VALUES('Cricket', '2010-03-03 05:59:01', NULL, '2010-03-03 05:59:01')[0m
+Redirected to http://localhost:3000/sports/2
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/sports]
+
+
+Processing SportsController#show (for 127.0.0.1 at 2010-03-03 16:59:01) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSport Load (0.2ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+Rendering template within layouts/sports
+Rendering sports/show
+Completed in 97ms (View: 91, DB: 0) | 200 OK [http://localhost/sports/2]
+
+
+Processing SportsController#index (for 127.0.0.1 at 2010-03-03 16:59:04) [GET]
+  [4;36;1mSport Load (0.6ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/sports
+Rendering sports/index
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/sports]
+
+
+Processing SportsController#new (for 127.0.0.1 at 2010-03-03 16:59:06) [GET]
+Rendering template within layouts/sports
+Rendering sports/new
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/sports/new]
+
+
+Processing SportsController#create (for 127.0.0.1 at 2010-03-03 16:59:12) [POST]
+  Parameters: {"commit"=>"Create Sport", "authenticity_token"=>"axwJYP5Fc3psQqcUHII0ex5CGD1vv0pZUrb+YEDKNEI=", "sport"=>{"name"=>"Basketball"}}
+  [4;35;1mSport Create (0.8ms)[0m   [0mINSERT INTO "sports" ("name", "updated_at", "parent_id", "created_at") VALUES('Basketball', '2010-03-03 05:59:12', NULL, '2010-03-03 05:59:12')[0m
+Redirected to http://localhost:3000/sports/3
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/sports]
+
+
+Processing SportsController#show (for 127.0.0.1 at 2010-03-03 16:59:12) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mSport Load (0.2ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 3) [0m
+Rendering template within layouts/sports
+Rendering sports/show
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/sports/3]
+
+
+Processing SportsController#edit (for 127.0.0.1 at 2010-03-03 16:59:14) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mSport Load (0.2ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 3) [0m
+Rendering template within layouts/sports
+Rendering sports/edit
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/sports/3/edit]
+
+
+Processing SportsController#index (for 127.0.0.1 at 2010-03-03 16:59:15) [GET]
+  [4;36;1mSport Load (0.6ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/sports
+Rendering sports/index
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/sports]
+
+
+Processing SportsController#new (for 127.0.0.1 at 2010-03-03 16:59:16) [GET]
+Rendering template within layouts/sports
+Rendering sports/new
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/sports/new]
+
+
+Processing SportsController#create (for 127.0.0.1 at 2010-03-03 17:00:58) [POST]
+  Parameters: {"commit"=>"Create Sport", "authenticity_token"=>"axwJYP5Fc3psQqcUHII0ex5CGD1vv0pZUrb+YEDKNEI=", "sport"=>{"name"=>"American Football"}}
+  [4;35;1mSport Create (0.4ms)[0m   [0mINSERT INTO "sports" ("name", "updated_at", "parent_id", "created_at") VALUES('American Football', '2010-03-03 06:00:58', NULL, '2010-03-03 06:00:58')[0m
+Redirected to http://localhost:3000/sports/4
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/sports]
+
+
+Processing SportsController#show (for 127.0.0.1 at 2010-03-03 17:00:58) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mSport Load (0.2ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 4) [0m
+Rendering template within layouts/sports
+Rendering sports/show
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/sports/4]
+
+
+Processing SportsController#create (for 127.0.0.1 at 2010-03-03 17:01:11) [POST]
+  Parameters: {"commit"=>"Create Sport", "authenticity_token"=>"axwJYP5Fc3psQqcUHII0ex5CGD1vv0pZUrb+YEDKNEI=", "sport"=>{"name"=>"Rugby League"}}
+  [4;35;1mSport Create (0.3ms)[0m   [0mINSERT INTO "sports" ("name", "updated_at", "parent_id", "created_at") VALUES('Rugby League', '2010-03-03 06:01:11', NULL, '2010-03-03 06:01:11')[0m
+Redirected to http://localhost:3000/sports/5
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/sports]
+
+
+Processing SportsController#show (for 127.0.0.1 at 2010-03-03 17:01:11) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mSport Load (0.2ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 5) [0m
+Rendering template within layouts/sports
+Rendering sports/show
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/sports/5]
+
+
+Processing SportsController#create (for 127.0.0.1 at 2010-03-03 17:01:29) [POST]
+  Parameters: {"commit"=>"Create Sport", "authenticity_token"=>"axwJYP5Fc3psQqcUHII0ex5CGD1vv0pZUrb+YEDKNEI=", "sport"=>{"name"=>"Ice Hockey"}}
+  [4;35;1mSport Create (0.4ms)[0m   [0mINSERT INTO "sports" ("name", "updated_at", "parent_id", "created_at") VALUES('Ice Hockey', '2010-03-03 06:01:29', NULL, '2010-03-03 06:01:29')[0m
+Redirected to http://localhost:3000/sports/6
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/sports]
+
+
+Processing SportsController#show (for 127.0.0.1 at 2010-03-03 17:01:29) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSport Load (0.2ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 6) [0m
+Rendering template within layouts/sports
+Rendering sports/show
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/sports/6]
+
+
+Processing SportsController#show (for 127.0.0.1 at 2010-03-03 17:05:57) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSport Load (0.2ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 6) [0m
+Rendering template within layouts/sports
+Rendering sports/show
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/sports/6]
+
+
+Processing SportsController#index (for 127.0.0.1 at 2010-03-03 17:06:02) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/sports
+Rendering sports/index
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/sports]
+
+
+Processing SportsController#index (for 127.0.0.1 at 2010-03-03 17:06:04) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/sports
+Rendering sports/index
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/sports]
+
+
+Processing SportsController#index (for 127.0.0.1 at 2010-03-03 17:06:06) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/sports
+Rendering sports/index
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/sports]
+
+
+Processing SportsController#index (for 127.0.0.1 at 2010-03-03 17:06:51) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering sports/index
+Completed in 37ms (View: 31, DB: 1) | 200 OK [http://localhost/sports]
+
+
+Processing SportsController#index (for 127.0.0.1 at 2010-03-03 17:08:47) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering sports/index
+Completed in 38ms (View: 32, DB: 1) | 200 OK [http://localhost/sports]
+
+
+Processing SportsController#index (for 127.0.0.1 at 2010-03-03 17:10:47) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering sports/index
+Completed in 37ms (View: 31, DB: 1) | 200 OK [http://localhost/sports]
+
+
+Processing SportsController#index (for 127.0.0.1 at 2010-03-03 17:10:50) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering sports/index
+Completed in 29ms (View: 24, DB: 1) | 200 OK [http://localhost/sports]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:10:53) [GET]
+  [4;35;1mRssfeed Load (0.5ms)[0m   [0mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 17:10:54) [GET]
+  [4;35;1mStory Load (1.0ms)[0m   [0mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/stories]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-03 17:10:56) [GET]
+
+ActionController::RoutingError (No route matches "/topics" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-03 17:10:59) [GET]
+
+ActionController::RoutingError (No route matches "/tags" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-03 17:11:01) [GET]
+
+ActionController::RoutingError (No route matches "/events" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-03 17:11:04) [GET]
+
+ActionController::RoutingError (No route matches "/users" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 17:12:39) [GET]
+  [4;36;1mStory Load (0.9ms)[0m   [0;1mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 17:13:17) [GET]
+  [4;35;1mStory Load (1.0ms)[0m   [0mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 112ms (View: 105, DB: 1) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 17:13:18) [GET]
+  [4;36;1mStory Load (1.0ms)[0m   [0;1mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 17:13:19) [GET]
+  [4;35;1mStory Load (1.5ms)[0m   [0mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 17:13:20) [GET]
+  [4;36;1mStory Load (0.9ms)[0m   [0;1mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 17:13:40) [GET]
+  [4;35;1mStory Load (1.0ms)[0m   [0mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 114ms (View: 108, DB: 1) | 200 OK [http://localhost/stories]
+
+
+Processing SportsController#index (for 127.0.0.1 at 2010-03-03 17:14:28) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering sports/index
+Completed in 30ms (View: 24, DB: 1) | 200 OK [http://localhost/sports]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:14:32) [GET]
+  [4;35;1mRssfeed Load (0.5ms)[0m   [0mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 17:14:35) [GET]
+  [4;35;1mStory Load (0.9ms)[0m   [0mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/stories]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:14:36) [GET]
+  [4;36;1mRssfeed Load (0.5ms)[0m   [0;1mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;35;1mSport Load (0.3ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 17:14:38) [GET]
+  [4;36;1mStory Load (1.0ms)[0m   [0;1mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#edit (for 127.0.0.1 at 2010-03-03 17:14:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStory Load (0.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/edit
+Completed in 48ms (View: 41, DB: 0) | 200 OK [http://localhost/stories/1/edit]
+
+
+Processing StoriesController#edit (for 127.0.0.1 at 2010-03-03 17:17:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/edit
+
+ActionView::TemplateError (undefined local variable or method `formtastic_stylesheet_link_tag' for #<ActionView::Base:0x102f8a810>) on line #7 of app/views/layouts/application.html.erb:
+4: 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+5: 	<title>imsportant.com</title>
+6: 	<%= stylesheet_link_tag "web_app_theme", "web_app_theme_override", "themes/default/style", :cache => true %>
+7: 	<%= formtastic_stylesheet_link_tag %>
+8: </head>
+9: <body>
+10:   <div id="container">
+
+    app/views/layouts/application.html.erb:7
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (56.8ms)
+Rendered rescues/_request_and_response (2.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StoriesController#edit (for 127.0.0.1 at 2010-03-03 17:19:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/edit
+Completed in 50ms (View: 43, DB: 0) | 200 OK [http://localhost/stories/1/edit]
+
+
+Processing StoriesController#update (for 127.0.0.1 at 2010-03-03 17:19:57) [PUT]
+  Parameters: {"commit"=>"Update Story", "story"=>{"accepted_at(3i)"=>"3", "accepted"=>"1", "accepted_at(4i)"=>"17", "accepted_at(5i)"=>"14", "title"=>"Cech out for a month", "published"=>"1", "url"=>"http://www.premierleague.com/page/Headlines/0,,12306~1977438,00.html", "published_at(1i)"=>"2010", "summary"=>"Chelsea goalkeeper Petr Cech will be out of action for at least a month.", "published_at(2i)"=>"3", "published_at(3i)"=>"3", "source_type"=>"", "accepted_at(1i)"=>"2010", "published_at(4i)"=>"17", "source"=>"", "accepted_at(2i)"=>"3", "published_at(5i)"=>"14"}, "authenticity_token"=>"axwJYP5Fc3psQqcUHII0ex5CGD1vv0pZUrb+YEDKNEI=", "id"=>"1"}
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 1) [0m
+  [4;35;1mStory Update (0.3ms)[0m   [0mUPDATE "stories" SET "published" = 't', "accepted" = 't', "published_at" = '2010-03-03 17:14:00', "source_type" = '', "accepted_at" = '2010-03-03 17:14:00', "updated_at" = '2010-03-03 06:19:57' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/stories/1
+Completed in 274ms (DB: 1) | 302 Found [http://localhost/stories/1]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-03 17:19:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/stories/1]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 17:20:00) [GET]
+  [4;35;1mStory Load (1.0ms)[0m   [0mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 28ms (View: 22, DB: 1) | 200 OK [http://localhost/stories]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:20:17) [GET]
+  [4;36;1mRssfeed Load (0.5ms)[0m   [0;1mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;35;1mSport Load (0.3ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing SportsController#index (for 127.0.0.1 at 2010-03-03 17:20:53) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering sports/index
+Completed in 29ms (View: 24, DB: 1) | 200 OK [http://localhost/sports]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:21:03) [GET]
+  [4;35;1mRssfeed Load (0.6ms)[0m   [0mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#new (for 127.0.0.1 at 2010-03-03 17:21:06) [GET]
+Rendering template within layouts/application
+Rendering rssfeeds/new
+  [4;35;1mSport Load (0.6ms)[0m   [0mSELECT * FROM "sports" [0m
+Completed in 34ms (View: 27, DB: 1) | 200 OK [http://localhost/rssfeeds/new]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 17:21:28) [GET]
+  [4;36;1mStory Load (1.0ms)[0m   [0;1mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://localhost/stories]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:21:34) [GET]
+  [4;35;1mRssfeed Load (0.5ms)[0m   [0mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:23:20) [GET]
+  [4;35;1mRssfeed Load (0.6ms)[0m   [0mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `fetch_rssfeed_path' for #<ActionView::Base:0x102da1058>) on line #14 of app/views/rssfeeds/index.html.erb:
+11:     <td><%= link_to 'Show', rssfeed %></td>
+12:     <td><%= link_to 'Edit', edit_rssfeed_path(rssfeed) %></td>
+13:     <td><%= link_to 'Destroy', rssfeed, :confirm => 'Are you sure?', :method => :delete %></td>
+14:     <td><%= link_to 'Fetch', fetch_rssfeed_path(rssfeed) %></td>
+15:   </tr>
+16: <% end %>
+17: </table>
+
+    app/views/rssfeeds/index.html.erb:14
+    app/views/rssfeeds/index.html.erb:7:in `each'
+    app/views/rssfeeds/index.html.erb:7
+    app/controllers/rssfeeds_controller.rb:7:in `index'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (61.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RssfeedsController#fetch (for 127.0.0.1 at 2010-03-03 17:24:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mRssfeed Load (0.3ms)[0m   [0mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering rssfeeds/fetch
+Completed in 589ms (View: 12, DB: 0) | 200 OK [http://localhost/rssfeeds/fetch/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-03 17:39:19) [GET]
+
+ActionController::RoutingError (No route matches "/rssfeeds" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-03 17:39:21) [GET]
+
+ActionController::RoutingError (No route matches "/rssfeeds" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-03 17:39:47) [GET]
+
+ActionController::RoutingError (No route matches "/rssfeeds" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-03 17:40:11) [GET]
+
+ActionController::RoutingError (No route matches "/rssfeeds" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-03 17:41:35) [GET]
+
+ActionController::RoutingError (No route matches "/rssfeeds" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:42:04) [GET]
+  [4;36;1mRssfeed Load (0.5ms)[0m   [0;1mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;35;1mSport Load (0.3ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `fetch_rssfeed_path' for #<ActionView::Base:0x103775138>) on line #14 of app/views/rssfeeds/index.html.erb:
+11:     <td><%= link_to 'Show', rssfeed %></td>
+12:     <td><%= link_to 'Edit', edit_rssfeed_path(rssfeed) %></td>
+13:     <td><%= link_to 'Destroy', rssfeed, :confirm => 'Are you sure?', :method => :delete %></td>
+14:     <td><%= link_to 'Fetch', fetch_rssfeed_path(rssfeed) %></td>
+15:   </tr>
+16: <% end %>
+17: </table>
+
+    app/views/rssfeeds/index.html.erb:14
+    app/views/rssfeeds/index.html.erb:7:in `each'
+    app/views/rssfeeds/index.html.erb:7
+    app/controllers/rssfeeds_controller.rb:7:in `index'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (61.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:42:21) [GET]
+  [4;36;1mRssfeed Load (0.5ms)[0m   [0;1mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;35;1mSport Load (0.3ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 107ms (View: 101, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#fetch (for 127.0.0.1 at 2010-03-03 17:42:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRssfeed Load (0.3ms)[0m   [0;1mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering rssfeeds/fetch
+Completed in 509ms (View: 12, DB: 0) | 200 OK [http://localhost/rssfeeds/1/fetch]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:44:41) [GET]
+  [4;35;1mRssfeed Load (0.5ms)[0m   [0mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:45:02) [GET]
+  [4;35;1mRssfeed Load (0.5ms)[0m   [0mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 28ms (View: 22, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:46:06) [GET]
+  [4;35;1mRssfeed Load (0.6ms)[0m   [0mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:46:29) [GET]
+  [4;35;1mRssfeed Load (0.5ms)[0m   [0mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:47:01) [GET]
+  [4;35;1mRssfeed Load (0.5ms)[0m   [0mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 108ms (View: 102, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#show (for 127.0.0.1 at 2010-03-03 17:47:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mRssfeed Load (0.3ms)[0m   [0mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering rssfeeds/show
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/rssfeeds/1]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:48:38) [GET]
+  [4;36;1mRssfeed Load (0.5ms)[0m   [0;1mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;35;1mSport Load (0.3ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:50:25) [GET]
+  [4;36;1mRssfeed Load (0.5ms)[0m   [0;1mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;35;1mSport Load (0.3ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:50:27) [GET]
+  [4;36;1mRssfeed Load (0.6ms)[0m   [0;1mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;35;1mSport Load (0.3ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:50:42) [GET]
+  [4;36;1mRssfeed Load (0.5ms)[0m   [0;1mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;35;1mSport Load (0.3ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 22ms (View: 15, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:51:04) [GET]
+  [4;36;1mRssfeed Load (0.5ms)[0m   [0;1mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;35;1mSport Load (0.2ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:52:12) [GET]
+  [4;36;1mRssfeed Load (0.6ms)[0m   [0;1mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;35;1mSport Load (0.3ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 22ms (View: 15, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#edit (for 127.0.0.1 at 2010-03-03 17:52:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRssfeed Load (0.3ms)[0m   [0;1mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering rssfeeds/edit
+  [4;35;1mSport Load (0.6ms)[0m   [0mSELECT * FROM "sports" [0m
+Completed in 41ms (View: 33, DB: 1) | 200 OK [http://localhost/rssfeeds/1/edit]
+
+
+Processing RssfeedsController#update (for 127.0.0.1 at 2010-03-03 17:52:35) [PUT]
+  Parameters: {"commit"=>"Update Rssfeed", "authenticity_token"=>"axwJYP5Fc3psQqcUHII0ex5CGD1vv0pZUrb+YEDKNEI=", "id"=>"1", "rssfeed"=>{"name"=>"Premier league news", "last_fetched(5i)"=>"57", "url"=>"http://www.premierleague.com/rss/ptv/page/ArticleIndex/0,,12306~2233528,00.xml", "sport_id"=>"1", "last_fetched(1i)"=>"2010", "last_fetched(2i)"=>"2", "last_fetched(3i)"=>"26", "frequnecy"=>"daily", "last_fetched(4i)"=>"19"}}
+  [4;36;1mRssfeed Load (0.3ms)[0m   [0;1mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 1) [0m
+  [4;35;1mRssfeed Update (0.3ms)[0m   [0mUPDATE "rssfeeds" SET "name" = 'Premier league news', "updated_at" = '2010-03-03 06:52:35' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/rssfeeds/1
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/rssfeeds/1]
+
+
+Processing RssfeedsController#show (for 127.0.0.1 at 2010-03-03 17:52:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRssfeed Load (0.3ms)[0m   [0;1mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering rssfeeds/show
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/rssfeeds/1]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:52:38) [GET]
+  [4;35;1mRssfeed Load (0.5ms)[0m   [0mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;36;1mSport Load (0.2ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/rssfeeds]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRssfeeds (20100226081701)
+Migrating to CreateSports (20100226081850)
+Migrating to CreateStories (20100226081930)
+Migrating to AddSportToStory (20100303053920)
+Migrating to AddAdditonalColumnsStories (20100303054735)
+Migrating to AddSourceToFeeds (20100303065314)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "rssfeeds" ADD "source" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100303065314')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("rssfeeds")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("sports")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("stories")[0m
+
+
+Processing RssfeedsController#edit (for 127.0.0.1 at 2010-03-03 17:54:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mRssfeed Load (0.3ms)[0m   [0mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering rssfeeds/edit
+  [4;36;1mSport Load (0.6ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Completed in 37ms (View: 29, DB: 1) | 200 OK [http://localhost/rssfeeds/1/edit]
+
+
+Processing RssfeedsController#update (for 127.0.0.1 at 2010-03-03 17:54:41) [PUT]
+  Parameters: {"commit"=>"Update Rssfeed", "authenticity_token"=>"axwJYP5Fc3psQqcUHII0ex5CGD1vv0pZUrb+YEDKNEI=", "id"=>"1", "rssfeed"=>{"name"=>"Premier league news", "last_fetched(5i)"=>"57", "url"=>"http://www.premierleague.com/rss/ptv/page/ArticleIndex/0,,12306~2233528,00.xml", "sport_id"=>"1", "last_fetched(1i)"=>"2010", "last_fetched(2i)"=>"2", "source"=>"http://www.premierleague.com", "last_fetched(3i)"=>"26", "frequnecy"=>"daily", "last_fetched(4i)"=>"19"}}
+  [4;35;1mRssfeed Load (0.3ms)[0m   [0mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 1) [0m
+  [4;36;1mRssfeed Update (0.3ms)[0m   [0;1mUPDATE "rssfeeds" SET "source" = 'http://www.premierleague.com', "updated_at" = '2010-03-03 06:54:41' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/rssfeeds/1
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/rssfeeds/1]
+
+
+Processing RssfeedsController#show (for 127.0.0.1 at 2010-03-03 17:54:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mRssfeed Load (0.3ms)[0m   [0mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering rssfeeds/show
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/rssfeeds/1]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:54:43) [GET]
+  [4;36;1mRssfeed Load (0.5ms)[0m   [0;1mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;35;1mSport Load (0.3ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:55:25) [GET]
+  [4;36;1mRssfeed Load (0.5ms)[0m   [0;1mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;35;1mSport Load (0.3ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 28ms (View: 21, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:55:44) [GET]
+  [4;36;1mRssfeed Load (0.6ms)[0m   [0;1mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;35;1mSport Load (0.3ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 29ms (View: 22, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#fetch (for 127.0.0.1 at 2010-03-03 17:55:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRssfeed Load (0.3ms)[0m   [0;1mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering rssfeeds/fetch
+Completed in 484ms (View: 11, DB: 0) | 200 OK [http://localhost/rssfeeds/1/fetch]
+
+
+Processing RssfeedsController#save_stories (for 127.0.0.1 at 2010-03-03 17:56:22) [PUT]
+  Parameters: {"commit"=>"Save Stories", "authenticity_token"=>"axwJYP5Fc3psQqcUHII0ex5CGD1vv0pZUrb+YEDKNEI=", "id"=>"1", "rssfeed"=>{"urls"=>["http://www.premierleague.com/page/Headlines/0,,12306~1982322,00.html", "http://www.premierleague.com/page/Headlines/0,,12306~1982148,00.html", "http://www.premierleague.com/page/Headlines/0,,12306~1981998,00.html", "http://www.premierleague.com/page/Headlines/0,,12306~1981622,00.html", "http://www.premierleague.com/page/Headlines/0,,12306~1981549,00.html", "http://www.premierleague.com/page/Headlines/0,,12306~1981460,00.html", "http://www.premierleague.com/page/Headlines/0,,12306~1981383,00.html", "http://www.premierleague.com/page/Headlines/0,,12306~1981377,00.html", "http://www.premierleague.com/page/Headlines/0,,12306~1981252,00.html", "http://www.premierleague.com/page/Headlines/0,,12306~1981280,00.html"]}}
+  [4;35;1mRssfeed Load (0.3ms)[0m   [0mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 1) [0m
+  [4;36;1mStory Create (0.4ms)[0m   [0;1mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 06:56:23', 'Clichy: Gunners never gave up on title', NULL, 'http://www.premierleague.com/page/Headlines/0,,12306~1982322,00.html', 'Gael Clichy says he and his Arsenal team-mates have never given up hope of winning the Barclays Premier League title.
+', NULL, NULL, NULL, NULL, '2010-03-03 06:56:23')[0m
+  [4;35;1mStory Create (0.3ms)[0m   [0mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 06:56:23', 'Cattermole working hard', NULL, 'http://www.premierleague.com/page/Headlines/0,,12306~1982148,00.html', 'Sunderland''s Lee Cattermole has been putting in extra hours on the training pitch as he bids to get fully fit.', NULL, NULL, NULL, NULL, '2010-03-03 06:56:23')[0m
+  [4;36;1mStory Create (0.4ms)[0m   [0;1mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 06:56:23', 'Baines looking to impress', NULL, 'http://www.premierleague.com/page/Headlines/0,,12306~1981998,00.html', 'Everton''s Leighton Baines is looking to show that he is good enough for a place in the England World Cup squad.', NULL, NULL, NULL, NULL, '2010-03-03 06:56:23')[0m
+  [4;35;1mStory Create (0.3ms)[0m   [0mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 06:56:23', 'Burnley backing Prince''s Trust', NULL, 'http://www.premierleague.com/page/Headlines/0,,12306~1981622,00.html', 'Burnley duo Steven Caldwell and David Edgar attended The Prince''s Trust ''Get Started with Football'' Programme. ', NULL, NULL, NULL, NULL, '2010-03-03 06:56:23')[0m
+  [4;36;1mStory Create (0.3ms)[0m   [0;1mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 06:56:23', 'Gardner''s community dig', NULL, 'http://www.premierleague.com/page/Headlines/0,,12306~1981549,00.html', 'Craig Gardner dug deep into Birmingham City''s Football and Education Programme. ', NULL, NULL, NULL, NULL, '2010-03-03 06:56:23')[0m
+  [4;35;1mStory Create (0.4ms)[0m   [0mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 06:56:23', 'Skrtel facing two months out', NULL, 'http://www.premierleague.com/page/Headlines/0,,12306~1981460,00.html', 'Liverpool defender Martin Skrtel is expected to be out of action for up to eight weeks with a broken metatarsal.', NULL, NULL, NULL, NULL, '2010-03-03 06:56:23')[0m
+  [4;36;1mStory Create (0.4ms)[0m   [0;1mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 06:56:23', 'Kranjcar lauds Modric', NULL, 'http://www.premierleague.com/page/Headlines/0,,12306~1981383,00.html', 'Tottenham Hotspur midfielder Niko Kranjcar has heaped praise on "sublime" team mate Luka Modric.', NULL, NULL, NULL, NULL, '2010-03-03 06:56:23')[0m
+  [4;35;1mStory Create (0.4ms)[0m   [0mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 06:56:23', 'Vermaelen hails Gunners attitude', NULL, 'http://www.premierleague.com/page/Headlines/0,,12306~1981377,00.html', 'Thomas Vermaelen says Arsenal have the mental toughness to win the Barclays Premier League.', NULL, NULL, NULL, NULL, '2010-03-03 06:56:23')[0m
+  [4;36;1mStory Create (0.4ms)[0m   [0;1mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 06:56:23', 'Neville''s future on hold', NULL, 'http://www.premierleague.com/page/Headlines/0,,12306~1981252,00.html', 'Manchester United defender Gary Neville has shelved all thoughts about his future until the end of the season.', NULL, NULL, NULL, NULL, '2010-03-03 06:56:23')[0m
+  [4;35;1mStory Create (0.4ms)[0m   [0mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 06:56:23', 'Torres return a boost for Benitez', NULL, 'http://www.premierleague.com/page/Headlines/0,,12306~1981280,00.html', 'Liverpool''s Rafael Benitez says Fernando Torres'' return is like signing a new player for the final matches of the season.', NULL, NULL, NULL, NULL, '2010-03-03 06:56:23')[0m
+
+ActionView::MissingTemplate (Missing template rssfeeds/save_stories.erb in view path app/views):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 17:56:27) [GET]
+  [4;36;1mRssfeed Load (0.7ms)[0m   [0;1mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;35;1mSport Load (0.2ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 22ms (View: 15, DB: 1) | 200 OK [http://localhost/rssfeeds/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 17:56:28) [GET]
+  [4;36;1mStory Load (2.3ms)[0m   [0;1mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 57ms (View: 49, DB: 2) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 18:08:39) [GET]
+  [4;35;1mStory Load (2.3ms)[0m   [0mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 60ms (View: 52, DB: 2) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 18:11:56) [GET]
+  [4;36;1mStory Load (2.2ms)[0m   [0;1mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 22ms (View: 15, DB: 2) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 18:14:57) [GET]
+  [4;35;1mStory Load (2.2ms)[0m   [0mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 23ms (View: 15, DB: 2) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 18:15:24) [GET]
+  [4;36;1mStory Load (2.3ms)[0m   [0;1mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 18ms (View: 10, DB: 2) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 18:16:45) [GET]
+  [4;35;1mStory Load (2.3ms)[0m   [0mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 23ms (View: 15, DB: 2) | 200 OK [http://localhost/stories]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-03 18:17:02) [GET]
+
+ActionController::RoutingError (No route matches "/story/1" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SportsController#index (for 127.0.0.1 at 2010-03-03 18:18:34) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering sports/index
+Completed in 30ms (View: 24, DB: 1) | 200 OK [http://localhost/sports]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 18:18:36) [GET]
+  [4;35;1mRssfeed Load (0.6ms)[0m   [0mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 18:18:38) [GET]
+  [4;35;1mStory Load (2.3ms)[0m   [0mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 19ms (View: 9, DB: 2) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 18:23:29) [GET]
+  [4;36;1mStory Load (2.2ms)[0m   [0;1mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 17ms (View: 9, DB: 2) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 18:23:30) [GET]
+  [4;35;1mStory Load (2.3ms)[0m   [0mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 102ms (View: 9, DB: 2) | 200 OK [http://localhost/stories]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 18:23:32) [GET]
+  [4;36;1mRssfeed Load (0.6ms)[0m   [0;1mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;35;1mSport Load (0.3ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#fetch (for 127.0.0.1 at 2010-03-03 18:23:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRssfeed Load (0.3ms)[0m   [0;1mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering rssfeeds/fetch
+Completed in 489ms (View: 13, DB: 0) | 200 OK [http://localhost/rssfeeds/1/fetch]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 18:23:37) [GET]
+  [4;35;1mRssfeed Load (0.5ms)[0m   [0mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+Completed in 107ms (View: 101, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#new (for 127.0.0.1 at 2010-03-03 18:23:39) [GET]
+Rendering template within layouts/application
+Rendering rssfeeds/new
+  [4;35;1mSport Load (0.7ms)[0m   [0mSELECT * FROM "sports" [0m
+Completed in 36ms (View: 28, DB: 1) | 200 OK [http://localhost/rssfeeds/new]
+
+
+Processing RssfeedsController#create (for 127.0.0.1 at 2010-03-03 18:24:39) [POST]
+  Parameters: {"commit"=>"Create Rssfeed", "authenticity_token"=>"axwJYP5Fc3psQqcUHII0ex5CGD1vv0pZUrb+YEDKNEI=", "rssfeed"=>{"name"=>"Crickinfo - Australia", "last_fetched(5i)"=>"23", "url"=>"http://www.cricinfo.com/rss/content/story/feeds/2.xml", "sport_id"=>"2", "last_fetched(1i)"=>"2010", "last_fetched(2i)"=>"3", "source"=>"http://www.cricinfo.com", "last_fetched(3i)"=>"3", "frequnecy"=>"", "last_fetched(4i)"=>"18"}}
+  [4;36;1mRssfeed Create (0.4ms)[0m   [0;1mINSERT INTO "rssfeeds" ("name", "updated_at", "url", "last_fetched", "sport_id", "source", "frequnecy", "created_at") VALUES('Crickinfo - Australia', '2010-03-03 07:24:39', 'http://www.cricinfo.com/rss/content/story/feeds/2.xml', '2010-03-03 18:23:00', 2, 'http://www.cricinfo.com', '', '2010-03-03 07:24:39')[0m
+Redirected to http://localhost:3000/rssfeeds/2
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#show (for 127.0.0.1 at 2010-03-03 18:24:39) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mRssfeed Load (0.3ms)[0m   [0mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering rssfeeds/show
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/rssfeeds/2]
+
+
+Processing RssfeedsController#index (for 127.0.0.1 at 2010-03-03 18:24:42) [GET]
+  [4;36;1mRssfeed Load (0.6ms)[0m   [0;1mSELECT * FROM "rssfeeds" [0m
+Rendering template within layouts/application
+Rendering rssfeeds/index
+  [4;35;1mSport Load (0.2ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://localhost/rssfeeds]
+
+
+Processing RssfeedsController#fetch (for 127.0.0.1 at 2010-03-03 18:24:44) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mRssfeed Load (0.3ms)[0m   [0mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering rssfeeds/fetch
+Completed in 198ms (View: 17, DB: 0) | 200 OK [http://localhost/rssfeeds/2/fetch]
+
+
+Processing RssfeedsController#save_stories (for 127.0.0.1 at 2010-03-03 18:24:57) [PUT]
+  Parameters: {"commit"=>"Save Stories", "authenticity_token"=>"axwJYP5Fc3psQqcUHII0ex5CGD1vv0pZUrb+YEDKNEI=", "id"=>"2", "rssfeed"=>{"urls"=>["http://www.cricinfo.com/australia/content/story/450426.html?CMP=OTC-RSS", "http://www.cricinfo.com/australia/content/story/450415.html?CMP=OTC-RSS", "http://www.cricinfo.com/australia/content/story/450408.html?CMP=OTC-RSS", "http://www.cricinfo.com/nzvaus2010/content/story/450290.html?CMP=OTC-RSS", "http://www.cricinfo.com/women/content/story/450289.html?CMP=OTC-RSS", "http://www.cricinfo.com/nzvaus2010/content/story/450170.html?CMP=OTC-RSS"]}}
+  [4;36;1mRssfeed Load (0.3ms)[0m   [0;1mSELECT * FROM "rssfeeds" WHERE ("rssfeeds"."id" = 2) [0m
+  [4;35;1mStory Create (0.6ms)[0m   [0mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 07:24:57', 'Hussey returns to lead Victoria', NULL, 'http://www.cricinfo.com/australia/content/story/450426.html?CMP=OTC-RSS', 'David Hussey will return to captain Victoria for their Sheffield Shield match against Western Australia in Perth this week as they aim to move a step closer to securing a home final', NULL, NULL, NULL, NULL, '2010-03-03 07:24:57')[0m
+  [4;36;1mStory Create (0.3ms)[0m   [0;1mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 07:24:57', 'Queensland call on Lynn for Sheffield Shield debut', NULL, 'http://www.cricinfo.com/australia/content/story/450415.html?CMP=OTC-RSS', 'Queensland will have at least one debutant for their important Sheffield Shield match this week after the teenage batsman Chris Lynn was named for his maiden first-class game', NULL, NULL, NULL, NULL, '2010-03-03 07:24:57')[0m
+  [4;35;1mStory Create (0.5ms)[0m   [0mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 07:24:57', 'Clark to return from back injury', NULL, 'http://www.cricinfo.com/australia/content/story/450408.html?CMP=OTC-RSS', 'Stuart Clark is set to make his comeback after a near three-month lay-off due to a back injury that kept him out of contention for most of Australia''s international matches this summer', NULL, NULL, NULL, NULL, '2010-03-03 07:24:57')[0m
+  [4;36;1mStory Create (0.3ms)[0m   [0;1mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 07:24:57', 'Southee and McCullum seal super NZ win', NULL, 'http://www.cricinfo.com/nzvaus2010/content/story/450290.html?CMP=OTC-RSS', 'A superb match needed a Super Over to split the teams and New Zealand prevailed to repay Brendan McCullum for his amazing century', NULL, NULL, NULL, NULL, '2010-03-03 07:24:57')[0m
+  [4;35;1mStory Create (0.4ms)[0m   [0mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 07:24:57', 'New Zealand knock over Australia again', NULL, 'http://www.cricinfo.com/women/content/story/450289.html?CMP=OTC-RSS', 'New Zealand took their winning streak over Australia to five with a 17-run success in the second Twenty20 in Christchurch', NULL, NULL, NULL, NULL, '2010-03-03 07:24:57')[0m
+  [4;36;1mStory Create (0.4ms)[0m   [0;1mINSERT INTO "stories" ("accepted", "accepted_at", "updated_at", "title", "published", "url", "summary", "sport_id", "source_type", "published_at", "source", "created_at") VALUES(NULL, NULL, '2010-03-03 07:24:57', 'Johnson calls for more Australian domination', NULL, 'http://www.cricinfo.com/nzvaus2010/content/story/450170.html?CMP=OTC-RSS', 'Mitchell Johnson wants Australia to continue dominating New Zealand after their strong performance in the opening Twenty20', NULL, NULL, NULL, NULL, '2010-03-03 07:24:57')[0m
+
+ActionView::MissingTemplate (Missing template rssfeeds/save_stories.erb in view path app/views):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-03 18:25:04) [GET]
+  [4;35;1mStory Load (3.1ms)[0m   [0mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 19ms (View: 10, DB: 3) | 200 OK [http://localhost/stories]

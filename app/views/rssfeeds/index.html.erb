@@ -1,16 +1,25 @@
 <h1>Listing rssfeeds</h1>
 
-<table>
-  <tr>
+<table class="feedtable">
+  <tr class="headerrow">
+	<th>Feed</th>
+	<th>Sport</th>
+	<th> Source </th>
+	<th>  </th>
+	<th> </th>
+	<th> </th>
+	<th> </th>
   </tr>
 
 <% @rssfeeds.each do |rssfeed| %>
   <tr>
 	<td><%=rssfeed.name %></td>
-	<td><%=rssfeed.sport %></td>
+	<td><%=rssfeed.sport.name %></td>
+	<td><%=rssfeed.source %></td>
     <td><%= link_to 'Show', rssfeed %></td>
     <td><%= link_to 'Edit', edit_rssfeed_path(rssfeed) %></td>
     <td><%= link_to 'Destroy', rssfeed, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Fetch', fetch_rssfeed_path(rssfeed) %></td>
   </tr>
 <% end %>
 </table>
