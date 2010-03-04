@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100303065314) do
+ActiveRecord::Schema.define(:version => 20100304102136) do
 
   create_table "rssfeeds", :force => true do |t|
     t.string   "url"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20100303065314) do
     t.string   "source_type"
     t.datetime "published_at"
     t.datetime "accepted_at"
+    t.datetime "original_publish_at"
   end
 
 end

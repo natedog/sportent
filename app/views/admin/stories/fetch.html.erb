@@ -1,0 +1,25 @@
+<h1>Listing Stories for <%=@rssfeed.name%></h1>
+<h2>from: <%=@rssfeed.url%></h2>
+
+<% form_for(:story, :url => { :action=>"save_fetched" }) do |f| %>
+
+<table>
+  <tr>
+  </tr>
+
+<% @stories.each do |story| %>
+  <tr>
+		<td><strong><%=story.title%></strong></td>
+		<td> <a href="<%=story.url%>"> link </a></td>
+		<td><%= check_box_tag "accepted[urls][]",  story.url %> </td>
+	
+  </tr>
+<% end %>
+
+</table>
+
+  <%= submit_tag 'Save Stories' %>
+
+<% end %>
+
+<br />

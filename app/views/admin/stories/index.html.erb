@@ -1,0 +1,38 @@
+
+
+<h1>Waiting to be Published</h1>
+
+<table class="feedtable">
+  <tr class="headerrow">
+		<th>Title</th>
+		<th>Sport</th>
+		<th>Qued for</th>
+		<th>Created at</th>
+		<th>Delete</th>
+		<th>Publish</th>
+  </tr>
+
+<% @stories.each do |story| %>
+  		
+<tr>
+		<td><%=story.title%></td>
+		<td><%=story.sport.name%></td>
+		<td></td>
+		<td><%=story.created_at%></td>
+		<td>Delete</td>
+		<td>Publish</td>
+</tr>								
+  
+<% end %>
+</table>
+
+<br />
+
+<% content_for :sidebar do %>
+	<ul>
+		<li><a href="/admin/rssfeeds">Fetch Stories from Feed</li>
+		<li><a href="/admin/stories">Waiting to be Published</a></li>
+		<li><a href="/admin/stories/published">Published Stories</a></li>
+		
+	</ul>	
+<% end %>	

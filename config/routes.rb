@@ -1,14 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
+  
   map.resources :stories
-
   map.resources :sports
-  map.resources :rssfeeds, :member => { :fetch => :get }
+  map.resources :rssfeeds
 
   
   map.namespace(:admin) do |admin|
-    admin.resources :stories
+    admin.resources :stories, :member => { :fetch => :get ,:save_fetched => :post}
     admin.resources :rssfeeds
-      map.resources :sports
+    admin.resources :sports
     
   end  
 
