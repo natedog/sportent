@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
 
   
   map.namespace(:admin) do |admin|
-    admin.resources :stories, :member => { :fetch => :get ,:save_fetched => :post}
+    admin.resources :stories, :member => { :fetch => [:get,:post] ,:save_fetched => :post, :publish=> [:get,:post]}
     admin.resources :rssfeeds
     admin.resources :sports
     

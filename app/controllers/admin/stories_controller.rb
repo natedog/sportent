@@ -78,7 +78,7 @@ class Admin::StoriesController < Admin::BaseController
     @story.destroy
 
     respond_to do |format|
-      format.html { redirect_to(stories_url) }
+      format.html { redirect_to(admin_stories_url) }
       format.xml  { head :ok }
     end
   end
@@ -118,4 +118,10 @@ class Admin::StoriesController < Admin::BaseController
      end   
       
   end 
+  
+  def publish
+      @story = Story.find(params[:id])
+      
+  end
+  
 end
