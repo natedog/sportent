@@ -1,3 +1,47 @@
+<h2><%=@story.title%></h2>
+<h3><%=@story.sport.name%></h3>
+<p><%=@story.summary%></p>
+<p><strong><%=time_ago_in_words(@story.original_publish_at)%> ago</strong></p>
+<h4>Semantic Tagging</h4>
+<% form_for(:story, :url => { :action=>"publish" }) do |f| %>
+<table class="feedtable">
+ <tr class="headerrow">
+	<th>Keywords</th>
+	<th>Entities</th>
+ </tr>
+<tr>
+	<td>
+		<ul class="list">
+		<% @keywords.each do |keyword| %>
+			<li> <%= check_box_tag "social_tags[tag][]",  keyword %> <%=keyword%>  </li>
+		<% end %>
+		</ul>
+	</td>
+	<td>
+		<ul class="list">
+		<% @entities.each do |tag| %>
+			<li> <%= check_box_tag "social_tags[tag][]",  tag[:tag] %> <%=tag[:tag]%> </li>
+		<% end %>
+		</ul>
+	</td>
+
+</tr>
+</table>
+
+<%= submit_tag 'Publish Story' %>	
+<% end %>
+<h4>Oddsense Event</h4>
+
+	
 
 <%= link_to 'Edit', edit_admin_story_path(@story) %> |
 <%= link_to 'Back', admin_stories_path %>
+
+<% content_for :sidebar do %>
+	Awaiting Pubishing
+	<ul>
+		<% @awaiting.each do |accepted_story|%>
+		<li><%= link_to accepted_story.title,  publish_admin_story_path(accepted_story) %></li>
+		<% end %>
+	</ul>	
+<% end %>

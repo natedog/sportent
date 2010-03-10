@@ -121,6 +121,11 @@ class Admin::StoriesController < Admin::BaseController
   
   def publish
       @story = Story.find(params[:id])
+      semantic_tags = Semantify::Semantify.fetch(@story.url)
+      @keywords = semantic_tags[:keywords]
+      @entities = semantic_tags[:entities]
+      
+      @awaiting = Story.accepted
       
   end
   

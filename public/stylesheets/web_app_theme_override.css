@@ -11,6 +11,7 @@
 
 .feedtable td {
 	padding:3px;
+	vertical-align: top;
 	
 }
 
@@ -38,3 +39,13 @@
 	right: 0px;
 	border : solid 1 px #CCCCCC;
 }
+
+ul.list {
+	margin: 5px;
+	padding:5px;
+}
+
+ul.list li {
+	font-size: 12px;
+	
+}	
