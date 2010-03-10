@@ -2,7 +2,7 @@ class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.xml
   def index
-    @stories = Story.published
+    @stories = Story.all
 
     respond_to do |format|
       format.html # index.html.erb

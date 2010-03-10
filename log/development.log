@@ -7252,3 +7252,203 @@ Rendering admin/stories/publish
   [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
   [4;35;1mStory Load (1.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't') [0m
 Completed in 6338ms (View: 27, DB: 2) | 200 OK [http://localhost/admin/stories/39/publish]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRssfeeds (20100226081701)
+Migrating to CreateSports (20100226081850)
+Migrating to CreateStories (20100226081930)
+Migrating to AddSportToStory (20100303053920)
+Migrating to AddAdditonalColumnsStories (20100303054735)
+Migrating to AddSourceToFeeds (20100303065314)
+Migrating to AddSportToStories (20100304055549)
+Migrating to AddOriginalPublishedAt (20100304102136)
+Migrating to SocialTags (20100310112224)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (12.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100310112224')[0m
+Migrating to CreateSocialTags (20100310112430)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "social_tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100310112430')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("rssfeeds")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("social_tags")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("sports")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("stories")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRssfeeds (20100226081701)
+Migrating to CreateSports (20100226081850)
+Migrating to CreateStories (20100226081930)
+Migrating to AddSportToStory (20100303053920)
+Migrating to AddAdditonalColumnsStories (20100303054735)
+Migrating to AddSourceToFeeds (20100303065314)
+Migrating to AddSportToStories (20100304055549)
+Migrating to AddOriginalPublishedAt (20100304102136)
+Migrating to SocialTags (20100310112224)
+Migrating to CreateSocialTags (20100310112430)
+Migrating to AddColumnsToSocialTags (20100310112745)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mALTER TABLE "social_tags" ADD "sport_id" integer[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "social_tags" ADD "name" text[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100310112745')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("rssfeeds")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("social_tags")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("sports")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("stories")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRssfeeds (20100226081701)
+Migrating to CreateSports (20100226081850)
+Migrating to CreateStories (20100226081930)
+Migrating to AddSportToStory (20100303053920)
+Migrating to AddAdditonalColumnsStories (20100303054735)
+Migrating to AddSourceToFeeds (20100303065314)
+Migrating to AddSportToStories (20100304055549)
+Migrating to AddOriginalPublishedAt (20100304102136)
+Migrating to SocialTags (20100310112224)
+Migrating to CreateSocialTags (20100310112430)
+Migrating to AddColumnsToSocialTags (20100310112745)
+Migrating to StoriesSocailTags (20100310113914)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100310113914')[0m
+Migrating to CreateStoryTags (20100310114953)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "story_tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "story_id" integer, "social_tag_id" integer, "votes" integer, "score" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100310114953')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("rssfeeds")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("social_tags")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("sports")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("stories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("story_tags")[0m
+
+
+Processing Admin::StoriesController#publish (for 127.0.0.1 at 2010-03-10 22:56:10) [GET]
+  Parameters: {"id"=>"39"}
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 39) [0m
+Rendering template within layouts/application
+Rendering admin/stories/publish
+  [4;35;1mSport Load (0.3ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;36;1mStory Load (1.5ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't') [0m
+Completed in 3824ms (View: 29, DB: 2) | 200 OK [http://localhost/admin/stories/39/publish]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-10 22:56:16) [GET]
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-10 22:56:18) [GET]
+Rendering template within layouts/application
+Rendering stories/index
+  [4;36;1mStory Load (0.5ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-10 22:56:19) [GET]
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-10 22:57:06) [GET]
+  [4;36;1mStory Load (5.2ms)[0m   [0;1mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+
+ActionView::TemplateError (Could not find the association :story_tags in model Story) on line #15 of app/views/stories/index.html.erb:
+12: 			<p><%= story.summary %></p>
+13:     		<div class="social_tags">
+14: 				
+15:     			<% story.social_tags.each do |tag| %>
+16: 					<%tag.name%><br/>
+17: 				<% end %>
+18:     		</div>
+
+    app/views/stories/index.html.erb:15
+    app/views/stories/index.html.erb:5:in `each'
+    app/views/stories/index.html.erb:5
+    app/controllers/stories_controller.rb:7:in `index'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (149.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-10 22:58:24) [GET]
+  [4;36;1mStory Load (5.3ms)[0m   [0;1mSELECT * FROM "stories" [0m
+Rendering template within layouts/application
+Rendering stories/index
+
+ActionView::TemplateError (Could not find the association :story_tags in model Story) on line #15 of app/views/stories/index.html.erb:
+12: 			<p><%= story.summary %></p>
+13:     		<div class="social_tags">
+14: 				
+15:     			<% story.social_tags.each do |tag| %>
+16: 					<%tag.name%><br/>
+17: 				<% end %>
+18:     		</div>
+
+    app/views/stories/index.html.erb:15
+    app/views/stories/index.html.erb:5:in `each'
+    app/views/stories/index.html.erb:5
+    app/controllers/stories_controller.rb:7:in `index'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.0ms)
+Rendered rescues/_request_and_response (2.4ms)
+Rendering rescues/layout (internal_server_error)

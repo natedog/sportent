@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  story_id: 1
+  social_tag_id: 1
+  votes: 1
+  score: 1
+
+two:
+  story_id: 1
+  social_tag_id: 1
+  votes: 1
+  score: 1

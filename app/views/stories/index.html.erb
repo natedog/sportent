@@ -10,7 +10,12 @@
 			
 			<h2><a href="/story/<%=story.id%>" target="_blank"><%= story.title %></a></h2>
 			<p><%= story.summary %></p>
-    		<div class="social_tags">Social Tags</div>
+    		<div class="social_tags">
+				
+    			<% story.social_tags.each do |tag| %>
+					<%tag.name%><br/>
+				<% end %>
+    		</div>
 			<div class="socail_opinion">Opinion</div>
 			<div class="scorecastr">Pick the Score</div>
 		</div>
