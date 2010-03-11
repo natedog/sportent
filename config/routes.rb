@@ -3,10 +3,11 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :stories
   map.resources :sports
   map.resources :rssfeeds
-
+  map.vote '/vote/:id/:choice' , :controller=> 'stories', :action=> 'vote',:conditions => { :method => :get }  
+  
   
   map.namespace(:admin) do |admin|
-    admin.resources :stories, :member => { :fetch => [:get,:post] ,:save_fetched => :post, :publish=> [:get,:post]}
+    admin.resources :stories, :member => { :fetch => :get ,:save_fetched => :post, :publish=> :get,:save_published => :post}
     admin.resources :rssfeeds
     admin.resources :sports
     

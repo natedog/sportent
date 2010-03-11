@@ -9,20 +9,24 @@
 
 			
 			<h2><a href="/story/<%=story.id%>" target="_blank"><%= story.title %></a></h2>
+			<div class="odds">
+					team a v team b
+					<br/> some odds
+			</div>
 			<p><%= story.summary %></p>
     		<div class="social_tags">
 				
-    			<% story.social_tags.each do |tag| %>
-					<%tag.name%><br/>
+    			<% story.story_tags.each do |tag| %>
+					<div class="tag"> <%=link_to "[ - ]", :controller=> "/stories",:action=> "vote",:id=>tag.id,:choice=> "down"   %> <%=tag.social_tag.name%>  <%=tag.votes%> / <%=tag.score%>   <%=link_to "[ + ]" , :controller=> "stories",:action=> "vote",:id=>tag.id,:choice=> "up" %> </div>
+					
 				<% end %>
-    		</div>
-			<div class="socail_opinion">Opinion</div>
+    			<br/>
+			</div>
+			<div class="social_opinion">Opinion</div>
 			<div class="scorecastr">Pick the Score</div>
 		</div>
 		
-		<div class="odds">
-				team a v team b some odds
-		</div>
+
 		
 				
 		

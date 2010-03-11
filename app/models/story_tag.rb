@@ -1,4 +1,4 @@
 class StoryTag < ActiveRecord::Base
-  has_many :stories
-  has_many :social_tags
+  belongs_to :story
+  belongs_to :social_tag
 end

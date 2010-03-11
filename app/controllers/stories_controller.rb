@@ -2,7 +2,7 @@ class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.xml
   def index
-    @stories = Story.all
+    @stories = Story.published
 
     respond_to do |format|
       format.html # index.html.erb
@@ -82,4 +82,27 @@ class StoriesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def vote
+     
+     story_tag = StoryTag.find(params[:id])
+     story_tag.votes = story_tag.votes.to_i+1 
+     
+     if params[:choice] == "up"
+        story_tag.score = story_tag.score.to_i+1 
+     else
+        story_tag.score = story_tag.score.to_i-1
+     end
+        
+     story_tag.save
+     
+     respond_to do |format|
+       
+      flash[:notice] = 'Your vote has been added.'
+       format.html { redirect_to(stories_url) }
+       format.xml  { head :ok }
+     end 
+    
+  end  
+  
 end

@@ -129,4 +129,24 @@ class Admin::StoriesController < Admin::BaseController
       
   end
   
+  def save_published
+     @story = Story.find(params[:id])
+     social_tags = params[:social_tags][:tag]
+     
+     social_tags.each do |tag|
+        
+        social_tag = SocialTag.new
+        social_tag.name = tag
+        social_tag.sport = @story.sport
+        social_tag.save
+        
+        @story.social_tags << social_tag
+         
+          
+     end   
+     @story.published = true
+     @story.published_at = Time.now
+     @story.save
+     
+  end
 end

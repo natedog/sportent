@@ -21,9 +21,13 @@
       </div>      
       <div id="main-navigation">
         <ul class="wat-cf">
-			<% @sports.each do |sport| %>
-        	<li><%= link_to sport.name, sport %></li>	
-			<% end %>
+        	<li><a href="/sports">Sports</a></li>	
+			<li><a href="/rssfeeds">Feeds</a></li>
+			<li><a href="/stories">Stories</a></li>
+			<li><a href="/topics">Topics</a></li>
+			<li><a href="/tags">Tags</a></li>
+			<li><a href="/events">Events</a></li>
+			<li><a href="/users">Users</a></li>
         </ul>
       </div>
     </div>    

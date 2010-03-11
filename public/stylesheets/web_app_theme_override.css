@@ -34,10 +34,13 @@
 
 .story .odds {
 	width: 200px;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	border : solid 1 px #CCCCCC;
+	height:40px;
+	float:right;
+	margin:0px 0px 10px 10px;
+	position: relative;
+	border : solid 1px #CCCCCC;
+	margin-right:3px;
+	text-align:center;
 }
 
 ul.list {
@@ -48,4 +51,23 @@ ul.list {
 ul.list li {
 	font-size: 12px;
 	
-}	
+}
+
+.social_tags {
+ 	padding: 15px 0px 15px 0px;	
+ 	clear: both;
+	height: 40px;
+}
+
+.social_tags div.tag {
+ 	margin:3px;
+	border: solid 1px #CCCCCC;
+	float:left;
+	text-align:center;
+	width:120px;
+	font-size: 10px;
+	height: 30px;
+}
+
+
+	

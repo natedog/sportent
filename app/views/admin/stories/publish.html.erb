@@ -3,7 +3,7 @@
 <p><%=@story.summary%></p>
 <p><strong><%=time_ago_in_words(@story.original_publish_at)%> ago</strong></p>
 <h4>Semantic Tagging</h4>
-<% form_for(:story, :url => { :action=>"publish" }) do |f| %>
+<% form_for(:story, :url => { :action=>"save_published" }) do |f| %>
 <table class="feedtable">
  <tr class="headerrow">
 	<th>Keywords</th>
