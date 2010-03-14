@@ -8,7 +8,7 @@
 		<div class="details">
 
 			
-			<h2><a href="/story/<%=story.id%>" target="_blank"><%= story.title %></a></h2>
+			<h2><a href="/stories/<%=story.id%>" target="_blank"><%= story.title %></a></h2>
 			<div class="odds">
 					team a v team b
 					<br/> some odds
@@ -36,3 +36,26 @@
 
 <br />
 
+
+<% content_for :sidebar do %>
+	<h4>Popular Stories</h4>
+		<% @popular_stories.each do |popular_story|%>
+			<li><%=popular_story.story.title%></li>
+		<% end %>
+	
+	<ul>
+		
+		
+	</ul>
+	
+	<h4>Treding Topics</h4>
+		<% @popular_tags.each do |popular_tag|%>
+			<li><%=popular_tag.social_tag.name%></li>
+		<% end %>
+	<ul>
+		
+		
+	</ul>
+	
+		
+<% end %>

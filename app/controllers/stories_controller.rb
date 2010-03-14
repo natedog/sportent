@@ -3,7 +3,9 @@ class StoriesController < ApplicationController
   # GET /stories.xml
   def index
     @stories = Story.published
-
+    @popular_stories = Vote.popular_stories
+    @popular_tags = Vote.popular_tags
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @stories }
@@ -86,15 +88,23 @@ class StoriesController < ApplicationController
   def vote
      
      story_tag = StoryTag.find(params[:id])
-     story_tag.votes = story_tag.votes.to_i+1 
+     sentiment = params[:choice]
      
-     if params[:choice] == "up"
-        story_tag.score = story_tag.score.to_i+1 
+     if sentiment == "up"
+        sentiment =  1
      else
-        story_tag.score = story_tag.score.to_i-1
+        sentiment =  -1
+     end        
+     
+     vote = Vote.new do |v|  
+          v.story = story_tag.story
+          v.social_tag = story_tag.social_tag
+          v.sentiment = sentiment
+          v.sport = story_tag.sport
+          v.story_tag = story_tag
      end
-        
-     story_tag.save
+     
+     vote.save
      
      respond_to do |format|
        
