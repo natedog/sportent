@@ -12,6 +12,12 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :sports
     
   end  
+  
+  map.namespace(:dock) do |dock|
+    dock.resources :stories
+    dock.resources :sports 
+    
+  end  
 
   # The priority is based upon order of creation: first created -> highest priority.
 

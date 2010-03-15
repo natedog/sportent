@@ -1,3 +1,4 @@
-
-<%= link_to 'Edit', edit_story_path(@story) %> |
-<%= link_to 'Back', stories_path %>
+<FRAMESET rows="100, *" FRAMEBORDER=NO FRAMESPACING=0 BORDER=0>
+	<FRAME src="/stories/dock/<%=@story.id%>">
+    <FRAME src="<%=@story.url%>">    
+</FRAMESET>	

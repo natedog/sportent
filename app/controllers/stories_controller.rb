@@ -16,11 +16,11 @@ class StoriesController < ApplicationController
   # GET /stories/1.xml
   def show
     @story = Story.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @story }
-    end
+    render :layout => "frame" 
+    #respond_to do |format|
+    #  format.html # show.html.erb
+    #  format.xml  { render :xml => @story }
+    #end
   end
 
   # GET /stories/new
@@ -113,6 +113,11 @@ class StoriesController < ApplicationController
        format.xml  { head :ok }
      end 
     
-  end  
+  end 
+  
+  def dock
+    @story = Story.find(params[:id])
+        render :layout => "dock" 
+  end 
   
 end

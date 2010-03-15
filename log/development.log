@@ -14402,3 +14402,2554 @@ Processing StoriesController#show (for 127.0.0.1 at 2010-03-14 16:29:22) [GET]
 Rendering template within layouts/application
 Rendering stories/show
 Completed in 23ms (View: 9, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 11:06:30) [GET]
+  [4;36;1mSport Load (10.0ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (17.1ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.4ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mSocialTag Load (0.4ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mVote Load (0.7ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;35;1mVote Load (1.4ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 426ms (View: 240, DB: 34) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:06:33) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/application
+Rendering stories/show
+Completed in 139ms (View: 43, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-03-15 11:16:22) [GET]
+  Parameters: {"id"=>"44"}
+
+SyntaxError (/workspace/sportent/app/controllers/stories_controller.rb:18: syntax error, unexpected tASSOC, expecting kEND
+    :layout => 'special_layout' 
+              ^):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.9ms)
+Rendered rescues/_request_and_response (2.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-03-15 11:18:42) [GET]
+  Parameters: {"id"=>"44"}
+
+SyntaxError (/workspace/sportent/app/controllers/stories_controller.rb:18: syntax error, unexpected tASSOC, expecting kEND
+    :layout => 'special_layout' 
+              ^):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:18:54) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+  app/controllers/stories_controller.rb:22:in `show'
+  app/controllers/stories_controller.rb:20:in `show'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:19:17) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.7ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+  app/controllers/stories_controller.rb:25:in `show'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:19:40) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/application
+Rendering stories/show
+Completed in 24ms (View: 10, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:19:41) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/application
+Rendering stories/show
+Completed in 117ms (View: 103, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:22:27) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 23ms (View: 8, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 11:24:06) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.7ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mVote Load (0.7ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;35;1mVote Load (1.3ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 68ms (View: 45, DB: 8) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:24:13) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 23ms (View: 8, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:25:22) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #5 of app/views/layouts/frame.html.erb:
+2: <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+3: <head>
+4: 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+5: 	<title><%=@sport.title%></title>
+6: 	<%= stylesheet_link_tag "web_app_theme", "web_app_theme_override", "themes/default/style", :cache => true %>
+7: 	<%= stylesheet_link_tag "formtastic" %>
+8:   <%= stylesheet_link_tag "formtastic_changes" %>
+
+    app/views/layouts/frame.html.erb:5
+    app/controllers/stories_controller.rb:19:in `show'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:26:07) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:27:38) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 21ms (View: 8, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:28:01) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.7ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 21ms (View: 7, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:30:09) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 24ms (View: 10, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#show to html (for 127.0.0.1 at 2010-03-15 11:30:09) [GET]
+  Parameters: {"id"=>"contents_of_frame1"}
+  [4;36;1mSport Load (0.7ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.2ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Story with ID=contents_of_frame1):
+  app/controllers/stories_controller.rb:18:in `show'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StoriesController#show to gif (for 127.0.0.1 at 2010-03-15 11:30:10) [GET]
+  Parameters: {"id"=>"contents_of_frame2"}
+  [4;36;1mSport Load (0.7ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.2ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Story with ID=contents_of_frame2):
+  app/controllers/stories_controller.rb:18:in `show'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:33:05) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+
+ActionView::TemplateError (undefined method `url' for nil:NilClass) on line #2 of app/views/stories/show.html.erb:
+1: <FRAMESET rows="100, *">
+2: 	<FRAME src="<%=@sport.url%>">
+3:     <FRAME src="<%=@sport.url%>">    
+4: </FRAMESET>	
+
+    app/views/stories/show.html.erb:2
+    app/controllers/stories_controller.rb:19:in `show'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (142.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSport Load (0.2ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 44) [0m
+  [4;35;1mStory Load (0.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:36:26) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:43:41) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.9ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 112ms (View: 9, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing ApplicationController#index to #<story:0x103772078> (for 127.0.0.1 at 2010-03-15 11:43:41) [GET]
+
+NameError (uninitialized constant Header):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:56:29) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#index to #<story:0x102f73ed0> (for 127.0.0.1 at 2010-03-15 11:56:29) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Completed in 18ms (View: 1, DB: 1) | 406 Not Acceptable [http://localhost/header/stories.%23%3Cstory:0x102f73ed0%3E]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 11:57:45) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;36;1mStory Load (0.8ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;35;1mStoryTag Load (0.8ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;35;1mStoryTag Load (0.7ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mVote Load (0.7ms)[0m   [0mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;36;1mVote Load (1.4ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 72ms (View: 48, DB: 9) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:57:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Story with ID=1):
+  app/controllers/stories_controller.rb:18:in `show'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:57:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.2ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Story with ID=1):
+  app/controllers/stories_controller.rb:18:in `show'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:58:07) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (1.2ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 22ms (View: 5, DB: 2) | 200 OK [http://localhost/header/stories/44]
+
+
+Processing StoriesController#index to #<story:0x102f1f6f0> (for 127.0.0.1 at 2010-03-15 11:58:07) [GET]
+  [4;35;1mSport Load (1.0ms)[0m   [0mSELECT * FROM "sports" [0m
+Completed in 21ms (View: 1, DB: 1) | 406 Not Acceptable [http://localhost/header/stories.%23%3Cstory:0x102f1f6f0%3E]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:59:49) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 19ms (View: 4, DB: 1) | 200 OK [http://localhost/header/stories/44]
+
+
+Processing StoriesController#index to #<story:0x10356ebc8> (for 127.0.0.1 at 2010-03-15 11:59:49) [GET]
+  [4;36;1mSport Load (0.9ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Completed in 19ms (View: 1, DB: 1) | 406 Not Acceptable [http://localhost/header/stories.%23%3Cstory:0x10356ebc8%3E]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:59:50) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.5ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 20ms (View: 4, DB: 1) | 200 OK [http://localhost/header/stories/44]
+
+
+Processing StoriesController#index to #<story:0x10356ebc8> (for 127.0.0.1 at 2010-03-15 11:59:50) [GET]
+  [4;35;1mSport Load (0.9ms)[0m   [0mSELECT * FROM "sports" [0m
+Completed in 18ms (View: 1, DB: 1) | 406 Not Acceptable [http://localhost/header/stories.%23%3Cstory:0x10356ebc8%3E]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:59:52) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 19ms (View: 4, DB: 1) | 200 OK [http://localhost/header/stories/44]
+
+
+Processing StoriesController#index to #<story:0x10356ebc8> (for 127.0.0.1 at 2010-03-15 11:59:52) [GET]
+  [4;36;1mSport Load (1.0ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Completed in 18ms (View: 1, DB: 1) | 406 Not Acceptable [http://localhost/header/stories.%23%3Cstory:0x10356ebc8%3E]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 11:59:55) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 23ms (View: 7, DB: 1) | 200 OK [http://localhost/header/stories/44]
+
+
+Processing StoriesController#index to #<story:0x10317c2b8> (for 127.0.0.1 at 2010-03-15 11:59:55) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+Completed in 18ms (View: 1, DB: 1) | 406 Not Acceptable [http://localhost/header/stories.%23%3Cstory:0x10317c2b8%3E]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 12:00:35) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (1.1ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 118ms (View: 4, DB: 2) | 200 OK [http://localhost/header/stories/44]
+
+
+Processing StoriesController#index to #<story:0x103765648> (for 127.0.0.1 at 2010-03-15 12:00:35) [GET]
+  [4;36;1mSport Load (5.5ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Completed in 22ms (View: 1, DB: 5) | 406 Not Acceptable [http://localhost/header/stories.%23%3Cstory:0x103765648%3E]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 12:00:36) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (3.4ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.5ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 24ms (View: 6, DB: 4) | 200 OK [http://localhost/header/stories/44]
+
+
+Processing StoriesController#index to #<story:0x103765648> (for 127.0.0.1 at 2010-03-15 12:00:37) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+Completed in 21ms (View: 1, DB: 1) | 406 Not Acceptable [http://localhost/header/stories.%23%3Cstory:0x103765648%3E]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 12:00:38) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (1.0ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 150ms (View: 6, DB: 1) | 200 OK [http://localhost/header/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 12:00:38) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (1.4ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (2.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 34ms (View: 6, DB: 4) | 200 OK [http://localhost/header/stories/44]
+
+
+Processing StoriesController#index to #<story:0x103765648> (for 127.0.0.1 at 2010-03-15 12:00:38) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Completed in 18ms (View: 1, DB: 1) | 406 Not Acceptable [http://localhost/header/stories.%23%3Cstory:0x103765648%3E]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-15 12:00:45) [GET]
+
+ActionController::RoutingError (No route matches "/header/" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 12:02:01) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.8ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;36;1mStoryTag Load (0.6ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mVote Load (0.7ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;35;1mVote Load (1.4ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 115ms (View: 79, DB: 9) | 200 OK [http://localhost/header/stories]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 12:02:26) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.9ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 115ms (View: 14, DB: 1) | 200 OK [http://localhost/header/stories/44]
+
+
+Processing StoriesController#index to #<story:0x1037a3d08> (for 127.0.0.1 at 2010-03-15 12:02:26) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Completed in 21ms (View: 1, DB: 1) | 406 Not Acceptable [http://localhost/header/stories.%23%3Cstory:0x1037a3d08%3E]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-15 12:05:19) [GET]
+
+ActionController::RoutingError (No route matches "/header/" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-15 12:05:32) [GET]
+
+ActionController::RoutingError (No route matches "/header/stories/edit/44" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-15 12:05:49) [GET]
+
+ActionController::RoutingError (No route matches "/header/stories/show/44" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 12:05:56) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 22ms (View: 6, DB: 1) | 200 OK [http://localhost/header/stories/44]
+
+
+Processing StoriesController#index to #<story:0x102cdfbb0> (for 127.0.0.1 at 2010-03-15 12:05:57) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+Completed in 16ms (View: 1, DB: 1) | 406 Not Acceptable [http://localhost/header/stories.%23%3Cstory:0x102cdfbb0%3E]
+
+
+Processing StoriesController#index to #<story:0x102cdfbb0> (for 127.0.0.1 at 2010-03-15 12:06:06) [GET]
+  [4;36;1mSport Load (0.9ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Completed in 19ms (View: 1, DB: 1) | 406 Not Acceptable [http://localhost/header/stories.%23%3Cstory:0x102cdfbb0%3E]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 12:06:14) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.6ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 25ms (View: 9, DB: 1) | 200 OK [http://localhost/header/stories/44]
+
+
+Processing StoriesController#index to #<story:0x102f1f060> (for 127.0.0.1 at 2010-03-15 12:06:14) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+Completed in 18ms (View: 1, DB: 1) | 406 Not Acceptable [http://localhost/header/stories.%23%3Cstory:0x102f1f060%3E]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 12:06:35) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#index to #<story:0x10360ee70> (for 127.0.0.1 at 2010-03-15 12:06:35) [GET]
+  [4;36;1mSport Load (1.0ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Completed in 18ms (View: 1, DB: 1) | 406 Not Acceptable [http://localhost/header/stories.%23%3Cstory:0x10360ee70%3E]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 12:08:27) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.7ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#index to #<story:0x102f103a8> (for 127.0.0.1 at 2010-03-15 12:08:27) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+Completed in 48ms (View: 1, DB: 1) | 406 Not Acceptable [http://localhost/header/stories.%23%3Cstory:0x102f103a8%3E]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 12:08:34) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 19ms (View: 4, DB: 1) | 200 OK [http://localhost/header/stories/44]
+
+
+Processing StoriesController#index to #<story:0x1036ddbd0> (for 127.0.0.1 at 2010-03-15 12:08:34) [GET]
+  [4;36;1mSport Load (1.0ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Completed in 19ms (View: 1, DB: 1) | 406 Not Acceptable [http://localhost/header/stories.%23%3Cstory:0x1036ddbd0%3E]
+
+
+Processing Admin::StoriesController#show (for 127.0.0.1 at 2010-03-15 12:08:42) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.9ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.6ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/application
+Rendering admin/stories/show
+Completed in 100ms (View: 82, DB: 1) | 200 OK [http://localhost/admin/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 12:13:07) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 24ms (View: 8, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 12:13:07) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 24ms (View: 8, DB: 1) | 200 OK [http://localhost/header/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 12:14:03) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (1.2ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.5ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 22ms (View: 5, DB: 2) | 200 OK [http://localhost/header/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 12:21:08) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 12:21:08) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.5ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 20ms (View: 4, DB: 1) | 200 OK [http://localhost/header/stories/44]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 12:37:02) [GET]
+  [4;35;1mSport Load (0.7ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;36;1mStory Load (0.8ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;35;1mStoryTag Load (0.8ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;35;1mStoryTag Load (0.7ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mVote Load (0.6ms)[0m   [0mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;35;1mStory Load (0.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;36;1mVote Load (1.4ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 150ms (View: 45, DB: 8) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 12:37:08) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;36;1mStory Load (0.8ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;35;1mStoryTag Load (0.8ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;36;1mSocialTag Load (0.6ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;35;1mStoryTag Load (0.7ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mVote Load (0.6ms)[0m   [0mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;35;1mStory Load (0.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;36;1mVote Load (1.3ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 71ms (View: 46, DB: 9) | 200 OK [http://localhost/header/stories]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-15 12:39:59) [GET]
+
+NameError (wrong constant name /header):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.7ms)
+Rendered rescues/_request_and_response (2.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-03-15 12:40:04) [GET]
+  Parameters: {"id"=>"44"}
+
+NameError (wrong constant name /header):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (121.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-03-15 12:40:17) [GET]
+  Parameters: {"id"=>"44"}
+
+NameError (uninitialized constant Header::Header):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 18:03:01) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://localhost/dock/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 18:03:22) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 19ms (View: 4, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 18:03:22) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (1.0ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.5ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 116ms (View: 4, DB: 2) | 200 OK [http://localhost/dock/stories/44]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:03:58) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;36;1mStory Load (0.8ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;35;1mStoryTag Load (0.8ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;35;1mStoryTag Load (0.7ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mVote Load (0.6ms)[0m   [0mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;35;1mStory Load (0.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;36;1mVote Load (1.3ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 72ms (View: 48, DB: 8) | 200 OK [http://localhost/dock/stories]
+
+
+Processing Admin::StoriesController#index (for 127.0.0.1 at 2010-03-15 18:06:35) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering admin/stories/index
+  [4;36;1mStory Load (2.7ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't') [0m
+  [4;35;1mSport Load (0.2ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;35;1mSport Load (0.4ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+Completed in 294ms (View: 278, DB: 4) | 200 OK [http://localhost/admin/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:07:15) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.8ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;36;1mStoryTag Load (0.6ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.6ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mVote Load (0.6ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;35;1mVote Load (1.3ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 72ms (View: 47, DB: 9) | 200 OK [http://localhost/dock/stories]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 18:07:21) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 111ms (View: 4, DB: 1) | 200 OK [http://localhost/dock/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 18:09:04) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 19ms (View: 4, DB: 1) | 200 OK [http://localhost/dock/stories/44]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:09:29) [GET]
+  [4;36;1mSport Load (0.9ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.8ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;36;1mStoryTag Load (0.6ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mVote Load (0.6ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;35;1mVote Load (1.3ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 73ms (View: 49, DB: 8) | 200 OK [http://localhost/dock/stories/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-15 18:10:03) [GET]
+
+NameError (uninitialized constant Dock::Dock):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-03-15 18:10:23) [GET]
+  Parameters: {"id"=>"44"}
+
+NameError (uninitialized constant Dock::Dock):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::StoriesController#index (for 127.0.0.1 at 2010-03-15 18:14:35) [GET]
+  [4;36;1mSport Load (0.7ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/admin
+Rendering admin/stories/index
+  [4;35;1mStory Load (2.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't') [0m
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+Completed in 112ms (View: 98, DB: 4) | 200 OK [http://localhost/admin/stories]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 18:14:48) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/dock/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 18:16:47) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 19ms (View: 4, DB: 1) | 200 OK [http://localhost/dock/stories/44]
+
+
+Processing Admin::StoriesController#show (for 127.0.0.1 at 2010-03-15 18:19:17) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/admin
+Rendering admin/stories/show
+Completed in 23ms (View: 8, DB: 1) | 200 OK [http://localhost/admin/stories/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 18:24:05) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.9ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 19ms (View: 4, DB: 1) | 200 OK [http://localhost/dock/stories/44]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:24:12) [GET]
+  [4;35;1mSport Load (0.9ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;36;1mStory Load (0.8ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;35;1mStoryTag Load (0.8ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mSocialTag Load (0.4ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mSocialTag Load (0.4ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;35;1mStoryTag Load (0.7ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mVote Load (0.6ms)[0m   [0mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;35;1mStory Load (0.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;36;1mVote Load (1.4ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 79ms (View: 53, DB: 9) | 200 OK [http://localhost/dock/stories/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:25:11) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.8ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.4ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mVote Load (0.6ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;35;1mVote Load (1.4ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 112ms (View: 78, DB: 9) | 200 OK [http://localhost/dock/stories/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-15 18:32:10) [GET]
+
+ActionController::RoutingError (No route matches "/dock/stories/" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:33:24) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.7ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mVote Load (0.6ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;35;1mVote Load (1.3ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 70ms (View: 47, DB: 8) | 200 OK [http://localhost/dock/stories/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:35:41) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.8ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.4ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.4ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mVote Load (0.6ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;35;1mVote Load (1.3ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 153ms (View: 48, DB: 9) | 200 OK [http://localhost/dock/stories/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:35:42) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.7ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mVote Load (0.6ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;35;1mVote Load (1.3ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 150ms (View: 129, DB: 8) | 200 OK [http://localhost/dock/stories/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:35:44) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.8ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (0.9ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mVote Load (0.6ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;35;1mVote Load (1.3ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 69ms (View: 47, DB: 8) | 200 OK [http://localhost/dock/stories/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:36:00) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.7ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mVote Load (0.6ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;35;1mVote Load (1.4ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 70ms (View: 47, DB: 8) | 200 OK [http://localhost/dock/stories/]
+
+
+Processing Admin::StoriesController#index (for 127.0.0.1 at 2010-03-15 18:42:59) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/admin
+Rendering admin/stories/index
+  [4;35;1mStory Load (2.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't') [0m
+  [4;36;1mSport Load (0.2ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 1) [0m
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+Completed in 127ms (View: 111, DB: 4) | 200 OK [http://localhost/admin/stories/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:43:47) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;36;1mStory Load (0.7ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;35;1mStoryTag Load (0.8ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;36;1mSocialTag Load (0.4ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;35;1mStoryTag Load (0.7ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mVote Load (0.6ms)[0m   [0mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;35;1mStory Load (0.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;36;1mVote Load (1.4ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 153ms (View: 130, DB: 8) | 200 OK [http://localhost/dock/stories/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:46:05) [GET]
+  [4;35;1mSport Load (1.1ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;36;1mStory Load (0.7ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;35;1mStoryTag Load (0.8ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mSocialTag Load (0.4ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;35;1mStoryTag Load (0.7ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mVote Load (0.6ms)[0m   [0mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;35;1mStory Load (0.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;36;1mVote Load (1.3ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 155ms (View: 132, DB: 9) | 200 OK [http://localhost/dock/stories/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:46:07) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;36;1mStory Load (0.7ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;35;1mStoryTag Load (0.8ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;35;1mStoryTag Load (0.7ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mVote Load (0.6ms)[0m   [0mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;35;1mStory Load (0.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;36;1mVote Load (1.3ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 69ms (View: 46, DB: 8) | 200 OK [http://localhost/dock/stories/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:46:08) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;36;1mStory Load (0.7ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;35;1mStoryTag Load (0.8ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;35;1mStoryTag Load (0.7ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mVote Load (0.6ms)[0m   [0mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;35;1mStory Load (0.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;36;1mVote Load (1.4ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 160ms (View: 47, DB: 8) | 200 OK [http://localhost/dock/stories/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:46:21) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;36;1mStory Load (0.7ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;35;1mStoryTag Load (0.8ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;35;1mStoryTag Load (0.7ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mVote Load (0.6ms)[0m   [0mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;35;1mStory Load (0.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;36;1mVote Load (1.5ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 72ms (View: 48, DB: 9) | 200 OK [http://localhost/stories/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:46:24) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;36;1mStory Load (0.7ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;35;1mStoryTag Load (0.8ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;35;1mStoryTag Load (0.6ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mSocialTag Load (0.7ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mVote Load (0.6ms)[0m   [0mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;35;1mStory Load (0.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;36;1mVote Load (1.4ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 69ms (View: 45, DB: 9) | 200 OK [http://localhost/stories/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:46:25) [GET]
+  [4;35;1mSport Load (0.7ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;36;1mStory Load (0.9ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;35;1mStoryTag Load (0.8ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;35;1mStoryTag Load (0.7ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mVote Load (0.6ms)[0m   [0mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;36;1mVote Load (1.4ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 150ms (View: 128, DB: 8) | 200 OK [http://localhost/stories/]
+
+
+Processing StoriesController#44 (for 127.0.0.1 at 2010-03-15 18:46:46) [GET]
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+
+ActionController::UnknownAction (No action responded to 44. Actions: create, destroy, edit, get_sports, index, new, show, update, and vote):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:47:01) [GET]
+  [4;36;1mSport Load (0.7ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.7ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;36;1mStoryTag Load (0.6ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mVote Load (0.6ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;35;1mVote Load (1.3ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 66ms (View: 44, DB: 8) | 200 OK [http://localhost/stories/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:47:01) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.7ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;36;1mStoryTag Load (0.6ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mVote Load (0.6ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;35;1mVote Load (1.3ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 68ms (View: 46, DB: 8) | 200 OK [http://localhost/stories/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-15 18:47:19) [GET]
+
+ActionController::RoutingError (No route matches "/stories/" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:47:31) [GET]
+  [4;36;1mSport Load (0.9ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.9ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (1.1ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+
+ActionView::TemplateError (No route matches {:action=>"vote", :controller=>"dock/stories", :choice=>"up", :id=>10}) on line #20 of app/views/stories/index.html.erb:
+17:     		<div class="social_tags">
+18: 				
+19:     			<% story.story_tags.each do |tag| %>
+20: 					<div class="tag"> <%=link_to "[ - ]", :controller=> "/stories",:action=> "vote",:id=>tag.id,:choice=> "down"   %> <%=tag.social_tag.name%>  <%=tag.votes%> / <%=tag.score%>   <%=link_to "[ + ]" , :controller=> "stories",:action=> "vote",:id=>tag.id,:choice=> "up" %> </div>
+21: 					
+22: 				<% end %>
+23:     			<br/>
+
+    app/views/stories/index.html.erb:20
+    app/views/stories/index.html.erb:19
+    app/views/stories/index.html.erb:5
+    app/controllers/stories_controller.rb:9:in `index'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.2ms)
+Rendered rescues/_request_and_response (2.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 18:47:50) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 30ms (View: 15, DB: 1) | 200 OK [http://localhost/dock/stories/44]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:49:18) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.8ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (1.2ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+
+ActionView::TemplateError (No route matches {:action=>"vote", :controller=>"dock/stories", :choice=>"up", :id=>10}) on line #20 of app/views/stories/index.html.erb:
+17:     		<div class="social_tags">
+18: 				
+19:     			<% story.story_tags.each do |tag| %>
+20: 					<div class="tag"> <%=link_to "[ - ]", :controller=> "/stories",:action=> "vote",:id=>tag.id,:choice=> "down"   %> <%=tag.social_tag.name%>  <%=tag.votes%> / <%=tag.score%>   <%=link_to "[ + ]" , :controller=> "stories",:action=> "vote",:id=>tag.id,:choice=> "up" %> </div>
+21: 					
+22: 				<% end %>
+23:     			<br/>
+
+    app/views/stories/index.html.erb:20
+    app/views/stories/index.html.erb:19
+    app/views/stories/index.html.erb:5
+    app/controllers/stories_controller.rb:9:in `index'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (155.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:49:20) [GET]
+  [4;36;1mSport Load (0.9ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.7ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+
+ActionView::TemplateError (No route matches {:action=>"vote", :controller=>"dock/stories", :choice=>"up", :id=>10}) on line #20 of app/views/stories/index.html.erb:
+17:     		<div class="social_tags">
+18: 				
+19:     			<% story.story_tags.each do |tag| %>
+20: 					<div class="tag"> <%=link_to "[ - ]", :controller=> "/stories",:action=> "vote",:id=>tag.id,:choice=> "down"   %> <%=tag.social_tag.name%>  <%=tag.votes%> / <%=tag.score%>   <%=link_to "[ + ]" , :controller=> "stories",:action=> "vote",:id=>tag.id,:choice=> "up" %> </div>
+21: 					
+22: 				<% end %>
+23:     			<br/>
+
+    app/views/stories/index.html.erb:20
+    app/views/stories/index.html.erb:19
+    app/views/stories/index.html.erb:5
+    app/controllers/stories_controller.rb:9:in `index'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (163.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:49:27) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.7ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mVote Load (0.6ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;36;1mStory Load (0.3ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;35;1mVote Load (1.3ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 73ms (View: 49, DB: 8) | 200 OK [http://localhost/stories/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 18:49:34) [GET]
+  [4;36;1mSport Load (0.9ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.9ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+
+ActionView::TemplateError (No route matches {:action=>"vote", :controller=>"dock/stories", :choice=>"up", :id=>10}) on line #20 of app/views/stories/index.html.erb:
+17:     		<div class="social_tags">
+18: 				
+19:     			<% story.story_tags.each do |tag| %>
+20: 					<div class="tag"> <%=link_to "[ - ]", :controller=> "/stories",:action=> "vote",:id=>tag.id,:choice=> "down"   %> <%=tag.social_tag.name%>  <%=tag.votes%> / <%=tag.score%>   <%=link_to "[ + ]" , :controller=> "stories",:action=> "vote",:id=>tag.id,:choice=> "up" %> </div>
+21: 					
+22: 				<% end %>
+23:     			<br/>
+
+    app/views/stories/index.html.erb:20
+    app/views/stories/index.html.erb:19
+    app/views/stories/index.html.erb:5
+    app/controllers/stories_controller.rb:9:in `index'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (72.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 18:49:38) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.9ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/dock/stories/44]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-15 18:51:38) [GET]
+
+ActionController::RoutingError (No route matches "/dock/sports" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-15 18:51:42) [GET]
+
+ActionController::RoutingError (No route matches "/dock/sports/" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SportsController#index (for 127.0.0.1 at 2010-03-15 18:53:38) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering sports/index
+Completed in 139ms (View: 123, DB: 1) | 200 OK [http://localhost/dock/sports/]
+
+
+Processing SportsController#index (for 127.0.0.1 at 2010-03-15 19:26:43) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering sports/index
+Completed in 137ms (View: 47, DB: 1) | 200 OK [http://localhost/dock/sports/]
+
+
+Processing SportsController#show (for 127.0.0.1 at 2010-03-15 19:26:47) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mSport Load (0.3ms)[0m   [0mSELECT * FROM "sports" WHERE ("sports"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering sports/show
+Completed in 63ms (View: 54, DB: 1) | 200 OK [http://localhost/sports/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-15 19:28:27) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 19:28:31) [GET]
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.8ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;35;1mSocialTag Load (0.4ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mVote Load (0.6ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;35;1mVote Load (1.4ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 84ms (View: 56, DB: 8) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 19:28:32) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#dock (for 127.0.0.1 at 2010-03-15 19:28:32) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+
+ActionController::UnknownAction (No action responded to dock. Actions: create, destroy, edit, get_sports, index, new, show, update, and vote):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 19:32:11) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#dock (for 127.0.0.1 at 2010-03-15 19:32:11) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+
+ActionController::UnknownAction (No action responded to dock. Actions: create, destroy, edit, get_sports, index, new, show, update, and vote):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 19:32:13) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.9ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 103ms (View: 4, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#dock (for 127.0.0.1 at 2010-03-15 19:32:13) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+
+ActionController::UnknownAction (No action responded to dock. Actions: create, destroy, edit, get_sports, index, new, show, update, and vote):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 19:32:25) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#dock (for 127.0.0.1 at 2010-03-15 19:32:25) [GET]
+  Parameters: {"id"=>"44"}
+  [4;35;1mSport Load (0.8ms)[0m   [0mSELECT * FROM "sports" [0m
+
+ActionView::MissingTemplate (Missing template stories/dock.erb in view path app/views):
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/nathanreeves/.rvm/ruby-1.8.6-p383/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 19:37:24) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.9ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 20ms (View: 6, DB: 1) | 200 OK [http://localhost/stories/44]
+
+
+Processing StoriesController#dock (for 127.0.0.1 at 2010-03-15 19:37:24) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSport Load (0.9ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+Rendering template within layouts/dock
+Rendering stories/dock
+Completed in 118ms (View: 13, DB: 1) | 200 OK [http://localhost/stories/dock/44]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 19:38:19) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 20ms (View: 4, DB: 1) | 200 OK [http://localhost/stories/35]
+
+
+Processing StoriesController#dock (for 127.0.0.1 at 2010-03-15 19:38:19) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/dock
+Rendering stories/dock
+Completed in 16ms (View: 1, DB: 1) | 200 OK [http://localhost/stories/dock/35]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 19:40:08) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.7ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 19ms (View: 4, DB: 2) | 200 OK [http://localhost/stories/35]
+
+
+Processing StoriesController#dock (for 127.0.0.1 at 2010-03-15 19:40:08) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/dock
+Rendering stories/dock
+Completed in 116ms (View: 101, DB: 1) | 200 OK [http://localhost/stories/dock/35]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 19:41:40) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 23ms (View: 8, DB: 1) | 200 OK [http://localhost/stories/35]
+
+
+Processing StoriesController#dock (for 127.0.0.1 at 2010-03-15 19:41:40) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/dock
+Rendering stories/dock
+Completed in 20ms (View: 5, DB: 1) | 200 OK [http://localhost/stories/dock/35]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 19:43:56) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 19ms (View: 4, DB: 1) | 200 OK [http://localhost/stories/35]
+
+
+Processing StoriesController#dock (for 127.0.0.1 at 2010-03-15 19:43:56) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mSport Load (0.9ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/dock
+Rendering stories/dock
+  [4;36;1mStoryTag Load (0.9ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.4ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.4ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+Completed in 150ms (View: 131, DB: 4) | 200 OK [http://localhost/stories/dock/35]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 19:44:18) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/stories/35]
+
+
+Processing StoriesController#dock (for 127.0.0.1 at 2010-03-15 19:44:18) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/dock
+Rendering stories/dock
+  [4;36;1mStoryTag Load (0.9ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.5ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.4ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+Completed in 50ms (View: 32, DB: 4) | 200 OK [http://localhost/stories/dock/35]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 19:44:20) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 19ms (View: 4, DB: 1) | 200 OK [http://localhost/stories/35]
+
+
+Processing StoriesController#dock (for 127.0.0.1 at 2010-03-15 19:44:20) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mSport Load (0.9ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/dock
+Rendering stories/dock
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+Completed in 40ms (View: 23, DB: 3) | 200 OK [http://localhost/stories/dock/35]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 19:44:21) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 19ms (View: 4, DB: 1) | 200 OK [http://localhost/stories/35]
+
+
+Processing StoriesController#dock (for 127.0.0.1 at 2010-03-15 19:44:21) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/dock
+Rendering stories/dock
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.4ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.4ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+Completed in 42ms (View: 24, DB: 4) | 200 OK [http://localhost/stories/dock/35]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 19:44:41) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/stories/35]
+
+
+Processing StoriesController#dock (for 127.0.0.1 at 2010-03-15 19:44:41) [GET]
+  Parameters: {"id"=>"35"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStory Load (0.6ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/dock
+Rendering stories/dock
+  [4;36;1mStoryTag Load (0.9ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;35;1mSocialTag Load (0.4ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;36;1mSocialTag Load (0.4ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mSocialTag Load (1.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+Completed in 52ms (View: 32, DB: 5) | 200 OK [http://localhost/stories/dock/35]
+
+
+Processing StoriesController#vote (for 127.0.0.1 at 2010-03-15 19:44:53) [GET]
+  Parameters: {"choice"=>"up", "id"=>"6"}
+  [4;36;1mSport Load (0.8ms)[0m   [0;1mSELECT * FROM "sports" [0m
+  [4;35;1mStoryTag Load (0.3ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags"."id" = 6) [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;35;1mSocialTag Load (0.4ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mVote Create (0.4ms)[0m   [0;1mINSERT INTO "votes" ("social_tag_id", "updated_at", "story_tag_id", "sentiment", "story_id", "sport_id", "created_at") VALUES(6, '2010-03-15 08:44:53', 6, 1, 35, NULL, '2010-03-15 08:44:53')[0m
+  [4;35;1mSocialTag Update (0.2ms)[0m   [0mUPDATE "social_tags" SET "votes" = 5, "score" = -3, "updated_at" = '2010-03-15 08:44:53' WHERE "id" = 6[0m
+  [4;36;1mStoryTag Update (0.2ms)[0m   [0;1mUPDATE "story_tags" SET "votes" = 5, "score" = -3, "updated_at" = '2010-03-15 08:44:53' WHERE "id" = 6[0m
+Redirected to http://localhost:3000/stories
+Completed in 169ms (DB: 3) | 302 Found [http://localhost/vote/6/up]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-15 19:44:53) [GET]
+  [4;35;1mSport Load (0.9ms)[0m   [0mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;36;1mStory Load (0.7ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+  [4;35;1mStoryTag Load (0.8ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 44) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+  [4;35;1mStoryTag Load (0.7ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;35;1mVote Load (0.6ms)[0m   [0mSELECT * FROM "votes" GROUP BY story_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+  [4;35;1mStory Load (0.3ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 44) [0m
+  [4;36;1mVote Load (1.3ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY social_tag_id ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 14) [0m
+Completed in 69ms (View: 45, DB: 8) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2010-03-15 19:44:57) [GET]
+  Parameters: {"id"=>"35"}
+  [4;35;1mSport Load (1.3ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.5ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/frame
+Rendering stories/show
+Completed in 21ms (View: 4, DB: 2) | 200 OK [http://localhost/stories/35]
+
+
+Processing StoriesController#dock (for 127.0.0.1 at 2010-03-15 19:44:57) [GET]
+  Parameters: {"id"=>"35"}
+  [4;35;1mSport Load (0.9ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 35) [0m
+Rendering template within layouts/dock
+Rendering stories/dock
+  [4;35;1mStoryTag Load (0.8ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 35) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 5) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 6) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 7) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 8) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 9) [0m
+Completed in 140ms (View: 122, DB: 3) | 200 OK [http://localhost/stories/dock/35]

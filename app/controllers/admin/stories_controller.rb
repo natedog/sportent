@@ -149,4 +149,6 @@ class Admin::StoriesController < Admin::BaseController
      @story.save
      
   end
+  
+ 
 end
