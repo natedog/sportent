@@ -69,5 +69,26 @@ ul.list li {
 	height: 30px;
 }
 
+.social_tags_dock {
+	padding: 5px 0px 5px 0px;	
+ 	clear: both;
+	height: 40px;
+	
+}
+
+.social_tags_dock div.tag {
+ 	margin:0px 3px 3px 3px;
+	border: solid 1px #CCCCCC;
+	float:left;
+	text-align:center;
+	width:120px;
+	font-size: 10px;
+	height: 30px;
+}
+
+h3.dock{
+	margin:2px;
+}	
+}
 
 	

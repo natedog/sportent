@@ -5,7 +5,7 @@ class Story < ActiveRecord::Base
     has_many :story_tags
 
     
-    named_scope :accepted, :conditions=> {:accepted=> true}
+    named_scope :accepted, :conditions=> {:accepted=> true, :published=> nil}, :order=> "published_at DESC"
     named_scope :published, :conditions=> {:accepted=> true, :published=>true} , :order=> "published_at DESC"
     
     

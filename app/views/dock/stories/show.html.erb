@@ -1,1 +1,12 @@
-show me some stuff
+<h3 class="dock"><%=@story.title%></h3>
+
+<div class="social_tags_dock">
+	
+	<% @story.story_tags.each do |tag| %>
+		<div class="tag"> <%=link_to "[ - ]", :controller=> "/stories",:action=> "vote",:id=>tag.id,:choice=> "down"   %> <%=tag.social_tag.name%>  <%=tag.votes%> / <%=tag.score%>   <%=link_to "[ + ]" , :controller=> "stories",:action=> "vote",:id=>tag.id,:choice=> "up" %> </div>
+		
+	<% end %>
+	<br/>
+</div>
+
+Opinion

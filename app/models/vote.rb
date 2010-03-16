@@ -15,7 +15,7 @@ class Vote < ActiveRecord::Base
       if self.sentiment == 1 
           self.social_tag.vote_up
           self.story_tag.vote_up
-      else
+      else 
           self.social_tag.vote_down
           self.story_tag.vote_down
       end  

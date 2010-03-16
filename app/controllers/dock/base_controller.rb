@@ -4,7 +4,7 @@
 class Dock::BaseController < ApplicationController
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
-
+  layout "dock"
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 end

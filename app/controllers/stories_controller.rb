@@ -16,6 +16,11 @@ class StoriesController < ApplicationController
   # GET /stories/1.xml
   def show
     @story = Story.find(params[:id])
+    #vote = Vote.new
+    #vote.story =  @story
+    #vote.sentiment = 0
+    #vote.save
+    
     render :layout => "frame" 
     #respond_to do |format|
     #  format.html # show.html.erb
@@ -115,9 +120,6 @@ class StoriesController < ApplicationController
     
   end 
   
-  def dock
-    @story = Story.find(params[:id])
-        render :layout => "dock" 
-  end 
+
   
 end
