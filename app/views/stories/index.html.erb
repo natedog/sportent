@@ -22,8 +22,20 @@
 				<% end %>
     			<br/>
 			</div>
-			<div class="social_opinion">Opinion</div>
+			<div class="social_opinion">
+				<p/>Opinions (<%=story.comments.count%>) : <% if story.comments.count > 0 %>
+					<%=story.comments.last.opinion%>
+					</p>
+					<%=link_to "Have your Say", opinion_story_path(story)%> | <%=link_to "View All",  opinion_view_story_path(story)%>
+					
+				<% else%>
+				
+					<%=link_to "Be the first to have an Opinion", opinion_story_path(story)%> 	</p>
+				<% end %>
+				 
+				</div>
 			<div class="scorecastr">Pick the Score</div>
+			
 		</div>
 		
 

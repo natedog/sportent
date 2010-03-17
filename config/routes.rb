@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.resources :stories
+  map.resources :stories, :member=> {:opinion=> :get, :opinion_save=>:post,:opinion_view=>:get}
   map.resources :sports
   map.resources :rssfeeds
   map.vote '/vote/:id/:choice' , :controller=> 'stories', :action=> 'vote',:conditions => { :method => :get }  

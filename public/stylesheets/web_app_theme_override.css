@@ -89,6 +89,14 @@ ul.list li {
 h3.dock{
 	margin:2px;
 }	
+
+textarea.opinion {
+	width:95%;
+	height:60px;
+	margin:10px 10px 10px 0px;
+	padding:10px;
 }
+
+
 
 	

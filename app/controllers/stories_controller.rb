@@ -120,6 +120,19 @@ class StoriesController < ApplicationController
     
   end 
   
-
+  def opinion
+    @story = Story.find(params[:id])
+  end  
+  
+  def opinion_save
+    @story = Story.find(params[:id])
+    @story.comments.create({:story=>@story,:opinion=>params[:comment][:opinion]})
+    respond_to do |format|
+      
+     flash[:notice] = 'Your opinion has been added.'
+      format.html { redirect_to(opinion_story_path(@story)) }
+      format.xml  { head :ok }
+    end
+  end
   
 end

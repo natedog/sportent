@@ -1,0 +1,25 @@
+<h1><a href="/stories/<%=@story.id%>" target="_blank"><%= @story.title %></a></h1>
+
+<h4>Have your Say</h4>
+<div class="odds">
+		team a v team b
+		<br/> some odds
+</div>
+<p><%= @story.summary %></p>
+
+<% form_for ( @story.comments.new, :url => { :action=>"opinion_save" }) do |f| %>
+	<%=f.text_area("opinion",  :class => "opinion") %>
+	 <%= submit_tag 'Submit' %>
+<% end %>
+
+<div class="social_tags">
+	
+	<% @story.story_tags.each do |tag| %>
+		<div class="tag"> <%=link_to "[ - ]", :controller=> "/stories",:action=> "vote",:id=>tag.id,:choice=> "down"   %> <%=tag.social_tag.name%>  <%=tag.votes%> / <%=tag.score%>   <%=link_to "[ + ]" , :controller=> "stories",:action=> "vote",:id=>tag.id,:choice=> "up" %> </div>
+		
+	<% end %>
+	<br/>
+</div>
+
+<h2>Other Opinions:</h2>
+
