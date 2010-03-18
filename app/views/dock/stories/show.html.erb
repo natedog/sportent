@@ -1,12 +1,6 @@
-<h3 class="dock"><%=@story.title%></h3>
+<div class="story">
+<%= render :partial => "stories/story", :locals => {:story=>@story ,:dock=>true}%>
 
-<div class="social_tags_dock">
-	
-	<% @story.story_tags.each do |tag| %>
-		<div class="tag"> <%=link_to "[ - ]", :controller=> "/stories",:action=> "vote",:id=>tag.id,:choice=> "down"   %> <%=tag.social_tag.name%>  <%=tag.votes%> / <%=tag.score%>   <%=link_to "[ + ]" , :controller=> "stories",:action=> "vote",:id=>tag.id,:choice=> "up" %> </div>
-		
-	<% end %>
-	<br/>
+
+<%= render :partial => "stories/social_tag_cloud", :locals => {:story_tags=>@story.story_tags}%>
 </div>
-
-Opinion

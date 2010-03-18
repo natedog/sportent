@@ -7,21 +7,11 @@
 		
 		<div class="details">
 
+			<%= render :partial => "story", :locals => {:story=>story ,:dock=>false}%>
+
 			
-			<h2><a href="/stories/<%=story.id%>" target="_blank"><%= story.title %></a></h2>
-			<div class="odds">
-					team a v team b
-					<br/> some odds
-			</div>
-			<p><%= story.summary %></p>
-    		<div class="social_tags">
-				
-    			<% story.story_tags.each do |tag| %>
-					<div class="tag"> <%=link_to "[ - ]", :controller=> "/stories",:action=> "vote",:id=>tag.id,:choice=> "down"   %> <%=tag.social_tag.name%>  <%=tag.votes%> / <%=tag.score%>   <%=link_to "[ + ]" , :controller=> "stories",:action=> "vote",:id=>tag.id,:choice=> "up" %> </div>
-					
-				<% end %>
-    			<br/>
-			</div>
+			<%= render :partial => "social_tag_cloud", :locals => {:story_tags=>story.story_tags}%>
+			
 			<div class="social_opinion">
 				<p/>Opinions (<%=story.comments.count%>) : <% if story.comments.count > 0 %>
 					<%=story.comments.last.opinion%>
@@ -42,7 +32,7 @@
 		
 				
 		
-  </div>
+ 
 <% end %>
 
 
@@ -52,7 +42,7 @@
 <% content_for :sidebar do %>
 	<h4>Popular Stories</h4>
 		<% @popular_stories.each do |popular_story|%>
-			<li><%=popular_story.story.title%></li>
+			<li><%=link_to popular_story.story.title, story_path(popular_story.story),:target=> "new"%></li>
 		<% end %>
 	
 	<ul>
