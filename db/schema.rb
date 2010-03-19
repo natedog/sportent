@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100316101906) do
+ActiveRecord::Schema.define(:version => 20100319112550) do
 
   create_table "comments", :force => true do |t|
     t.text     "opinion"
@@ -60,6 +60,8 @@ ActiveRecord::Schema.define(:version => 20100316101906) do
     t.datetime "published_at"
     t.datetime "accepted_at"
     t.datetime "original_publish_at"
+    t.integer  "votes"
+    t.integer  "score"
   end
 
   create_table "story_tags", :force => true do |t|

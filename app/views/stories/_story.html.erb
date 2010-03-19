@@ -1,17 +1,19 @@
-<% if dock == false%>
+<div class="story_score"><%=story.votes%>/<%=story.score%></div>
+<div class="odds">
+		team a v team b
+		<br/> some odds
+</div><% if dock == false%>
 <h2><a href="<%=story_path(story)%>" target="_blank"><%= story.title %></a></h2>
 <% else %>
 <h2><%= story.title %></h2>
 <% end %>
-
-<div class="odds">
-		team a v team b
-		<br/> some odds
-</div>
-
-
 <%=story.published_at.to_s%>
+
+
+	
+
 
 <% if dock == false%>
 <p><%= story.summary %></p>
 <% end %>
+

@@ -1,6 +1,12 @@
-<div class="story">
+<div class="story dock_story">
 <%= render :partial => "stories/story", :locals => {:story=>@story ,:dock=>true}%>
 
 
 <%= render :partial => "stories/social_tag_cloud", :locals => {:story_tags=>@story.story_tags}%>
+
+<%= render :partial => "stories/opinion", :locals => {:story=>@story ,:dock=>true}%>
 </div>
+
+<div class="dock_controls">
+wqeqw
+</div>	

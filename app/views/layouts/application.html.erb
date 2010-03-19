@@ -22,7 +22,7 @@
       <div id="main-navigation">
         <ul class="wat-cf">
 			<% @sports.each do |sport| %>
-        	<li><%= link_to sport.name, sport %></li>	
+        	<li><a href="/<%=sport.name%>"><%=sport.name%></a></li>	
 			<% end %>
         </ul>
       </div>

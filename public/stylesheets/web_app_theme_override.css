@@ -54,9 +54,9 @@ ul.list li {
 }
 
 .social_tags {
- 	padding: 15px 0px 15px 0px;	
+ 	padding: 5px 0px 5px 0px;	
  	clear: both;
-	height: 40px;
+	height: 20px;
 }
 
 .social_tags div.tag {
@@ -102,5 +102,23 @@ div.scorecastr{
 	
 }
 
+div.story_score{
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin: 0px 10px 10px 0px;
+	border: solid 1px #CCC;
+	
+}
 
+.dock_story{
+	width:644px;
+	float:left;
+}
+
+.dock_controls{
+	width:214px;
+	float:right;
+	
+}
 	

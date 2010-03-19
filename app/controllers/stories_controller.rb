@@ -2,7 +2,12 @@ class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.xml
   def index
+    if params[:sport] 
+         
+    end  
+    
     @stories = Story.published
+    
     @popular_stories = Vote.popular_stories
     @popular_tags = Vote.popular_tags
     
