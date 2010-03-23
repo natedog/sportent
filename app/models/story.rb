@@ -7,8 +7,8 @@ class Story < ActiveRecord::Base
     
     named_scope :accepted, :conditions=> {:accepted=> true, :published=> nil}, :order=> "published_at DESC"
     named_scope :published, :conditions=> {:accepted=> true, :published=>true} , :order=> "published_at DESC"
+    named_scope :sport, lambda {|*args| {:conditions=>{:sport_id => args.first || "1"}}}
     
-   
     def vote_up
         self.votes = self.votes.to_i+1
         self.score = self.score.to_i+1

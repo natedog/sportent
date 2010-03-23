@@ -3,10 +3,14 @@ class StoriesController < ApplicationController
   # GET /stories.xml
   def index
     if params[:sport] 
-         
+      sport = Sport.slug(params[:sport])
+      #render " #{sport}"
+      @stories = Story.published.sport(sport.first.id)
+    else     
+      @stories = Story.published
     end  
     
-    @stories = Story.published
+    
     
     @popular_stories = Vote.popular_stories
     @popular_tags = Vote.popular_tags

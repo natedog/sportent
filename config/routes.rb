@@ -1,8 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   
   map.root :controller=> "stories"
-  map.stories '/:sport', :controller=>"stories"
-  
+  map.stories '/s/:sport', :controller=>"stories", :action=> "index"
   map.resources :stories, :member=> {:opinion=> :get, :opinion_save=>:post,:opinion_view=>:get}
   map.resources :sports
   map.resources :rssfeeds
