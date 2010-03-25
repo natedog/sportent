@@ -4,8 +4,9 @@ class StoriesController < ApplicationController
   def index
     if params[:sport] 
       sport = Sport.slug(params[:sport])
+      @sport = sport.first
       #render " #{sport}"
-      @stories = Story.published.sport(sport.first.id)
+      @stories = Story.published.sport(@sport.id)
     else     
       @stories = Story.published
     end  

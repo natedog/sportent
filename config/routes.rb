@@ -1,12 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
   
   map.root :controller=> "stories"
-  map.stories '/s/:sport', :controller=>"stories", :action=> "index"
+  map.sport_stories '/s/:sport', :controller=>"stories", :action=> "index"
   map.resources :stories, :member=> {:opinion=> :get, :opinion_save=>:post,:opinion_view=>:get}
   map.resources :sports
   map.resources :rssfeeds
+  map.resources :social_tags
   map.vote '/vote/:id/:choice' , :controller=> 'stories', :action=> 'vote',:conditions => { :method => :get }  
-  
+  #map.trend '/t/:sport/:social_tag', :controller=> 'social_tags', :action=>"show"
+  #map.trends '/t/:sport', :controller=> 'social_tags', :action=>"index"
   
   map.namespace(:admin) do |admin|
     admin.resources :stories, :member => { :fetch => :get ,:save_fetched => :post, :publish=> :get,:save_published => :post}

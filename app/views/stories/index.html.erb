@@ -1,6 +1,9 @@
 
-
-
+<% if @sport %>
+<h1>Latest <%=@sport.name.capitalize%> stories </h1>
+<% else %>
+<h1>Latest stories from all sports</h1>
+<% end %>
 
 <% @stories.each do |story| %>
   <div class="story">

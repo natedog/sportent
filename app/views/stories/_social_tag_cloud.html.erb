@@ -1,7 +1,9 @@
 <div class="social_tags">
 	
 	<% story_tags.each do |tag| %>
-		<div class="tag"> <%=link_to "[ - ]", :controller=> "/stories",:action=> "vote",:id=>tag.id,:choice=> "down"   %> <%=link_to tag.social_tag.name %>  <%=tag.votes%> / <%=tag.score%>   <%=link_to "[ + ]" , :controller=> "stories",:action=> "vote",:id=>tag.id,:choice=> "up" %> </div>
+		<div class="tag"> <%=link_to "[ - ]", :controller=> "/stories",:action=> "vote",:id=>tag.id,:choice=> "down", :return_to =>
+		request.request_uri   %> <%=link_to tag.social_tag.name, social_tag_path(tag.social_tag) %>  <%=tag.votes%> / <%=tag.score%>   <%=link_to "[ + ]" , :controller=> "stories",:action=> "vote",:id=>tag.id,:choice=> "up", :return_to =>
+		request.request_uri %> </div>
 		
 	<% end %>
 	<br/>
