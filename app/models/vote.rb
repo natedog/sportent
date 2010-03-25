@@ -6,8 +6,11 @@ class Vote < ActiveRecord::Base
   
   after_save :aggregate_votes
   
-  named_scope :popular_stories, :group => 'story_id', :order=> "created_at DESC", :limit=>10
-  named_scope :popular_tags, :group => 'social_tag_id' , :order=> "created_at DESC" ,:limit=>10
+  #named_scope :popular_stories, :group => 'story_id,', :order=> "created_at DESC", :limit=>10
+  #named_scope :popular_tags, :group => 'social_tag_id,' , :order=> "created_at DESC" ,:limit=>10
+  
+  named_scope :popular_stories,  :order=> "created_at DESC", :limit=>10
+  named_scope :popular_tags,  :order=> "created_at DESC" ,:limit=>10
   
   
   
