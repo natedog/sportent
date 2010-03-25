@@ -9,8 +9,8 @@ class Vote < ActiveRecord::Base
   #named_scope :popular_stories, :group => 'story_id,', :order=> "created_at DESC", :limit=>10
   #named_scope :popular_tags, :group => 'social_tag_id,' , :order=> "created_at DESC" ,:limit=>10
   
-  named_scope :popular_stories,:select => 'DISTINCT story_id',  :order=> "created_at DESC", :limit=>10
-  named_scope :popular_tags, :select => 'DISTINCT social_tag_id',  :order=> "created_at DESC" ,:limit=>10
+  named_scope :popular_stories,:select => 'DISTINCT story_id,created_at,id',  :order=> "created_at DESC", :limit=>10
+  named_scope :popular_tags, :select => 'DISTINCT social_tag_id,created_at',  :order=> "created_at DESC" ,:limit=>10
   
   
   
