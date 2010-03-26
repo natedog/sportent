@@ -42827,3 +42827,537 @@ Rendered stories/_opinion (8.7ms)
   [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 20) [0m
   [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 31) [0m
 Completed in 169ms (View: 58, DB: 10) | 200 OK [http://localhost/s/Australian%20Rules]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-25 23:02:41) [GET]
+  Parameters: {"sport"=>"Australian Rules"}
+  [4;35;1mSport Load (0.9ms)[0m   [0mSELECT * FROM "sports" [0m
+  [4;36;1mSport Load (0.3ms)[0m   [0;1mSELECT * FROM "sports" WHERE ("sports"."name" = 'Australian Rules') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (0.6ms)[0m   [0mSELECT * FROM "stories" WHERE (("stories"."sport_id" = 8 AND "stories"."published" = 't' AND "stories"."accepted" = 't')) ORDER BY published_at DESC[0m
+Rendered stories/_story (5.5ms)
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 58) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 40) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 42) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 43) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 44) [0m
+Rendered stories/_social_tag_cloud (20.2ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 58) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".story_id = 58) ORDER BY comments.id DESC LIMIT 1[0m
+Rendered stories/_opinion (96.6ms)
+  [4;35;1mVote Load (0.9ms)[0m   [0mSELECT DISTINCT story_id,created_at,id FROM "votes" ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;36;1mVote Load (0.8ms)[0m   [0;1mSELECT DISTINCT social_tag_id,created_at FROM "votes" ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 36) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 35) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 35) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 42) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 40) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 43) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 44) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 36) [0m
+Completed in 170ms (View: 146, DB: 7) | 200 OK [http://localhost/s/Australian%20Rules]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-26 20:31:28) [GET]
+  [4;36;1mSport Load (37.7ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (17.1ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+Rendered stories/_story (287.8ms)
+  [4;36;1mStoryTag Load (1.1ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 58) [0m
+  [4;35;1mSocialTag Load (0.5ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 40) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 42) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 43) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 44) [0m
+Rendered stories/_social_tag_cloud (52.9ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 58) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".story_id = 58) ORDER BY comments.id DESC LIMIT 1[0m
+Rendered stories/_opinion (44.0ms)
+Rendered stories/_story (0.5ms)
+  [4;35;1mStoryTag Load (0.8ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 56) [0m
+  [4;36;1mSocialTag Load (0.4ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 35) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 36) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 37) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 38) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 39) [0m
+Rendered stories/_social_tag_cloud (10.1ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 56) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".story_id = 56) ORDER BY comments.id DESC LIMIT 1[0m
+Rendered stories/_opinion (2.7ms)
+Rendered stories/_story (0.5ms)
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 55) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 30) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 31) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 32) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 33) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 34) [0m
+Rendered stories/_social_tag_cloud (9.9ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 55) [0m
+Rendered stories/_opinion (1.6ms)
+Rendered stories/_story (0.5ms)
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 54) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 25) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 26) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 27) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 28) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 29) [0m
+Rendered stories/_social_tag_cloud (9.4ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 54) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 54) [0m
+Rendered stories/_opinion (1.5ms)
+Rendered stories/_story (0.5ms)
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 53) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 19) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 20) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 21) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 22) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 23) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 24) [0m
+Rendered stories/_social_tag_cloud (11.1ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 53) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 53) [0m
+Rendered stories/_opinion (1.6ms)
+Rendered stories/_story (0.5ms)
+  [4;35;1mStoryTag Load (0.6ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 51) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 15) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 16) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 17) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 18) [0m
+Rendered stories/_social_tag_cloud (7.7ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 51) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 51) [0m
+Rendered stories/_opinion (1.6ms)
+  [4;36;1mVote Load (1.5ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id,created_at ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;35;1mVote Load (1.5ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id,created_at ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 36) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 35) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 35) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 42) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 40) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 43) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 44) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 36) [0m
+Completed in 998ms (View: 764, DB: 73) | 200 OK [http://localhost/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-26 20:31:46) [GET]
+  [4;36;1mSport Load (0.9ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (1.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+Rendered stories/_story (5.6ms)
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 58) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 40) [0m
+  [4;36;1mSocialTag Load (0.4ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 42) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 43) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 44) [0m
+Rendered stories/_social_tag_cloud (20.3ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 58) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".story_id = 58) ORDER BY comments.id DESC LIMIT 1[0m
+Rendered stories/_opinion (8.4ms)
+Rendered stories/_story (0.5ms)
+  [4;35;1mStoryTag Load (0.7ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 56) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 35) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 36) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 37) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 38) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 39) [0m
+Rendered stories/_social_tag_cloud (9.7ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 56) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".story_id = 56) ORDER BY comments.id DESC LIMIT 1[0m
+Rendered stories/_opinion (2.8ms)
+Rendered stories/_story (0.5ms)
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 55) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 30) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 31) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 32) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 33) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 34) [0m
+Rendered stories/_social_tag_cloud (10.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 55) [0m
+Rendered stories/_opinion (1.6ms)
+Rendered stories/_story (0.5ms)
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 54) [0m
+  [4;35;1mSocialTag Load (0.4ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 25) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 26) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 27) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 28) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 29) [0m
+Rendered stories/_social_tag_cloud (9.8ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 54) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 54) [0m
+Rendered stories/_opinion (1.6ms)
+Rendered stories/_story (0.5ms)
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 53) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 19) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 20) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 21) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 22) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 23) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 24) [0m
+Rendered stories/_social_tag_cloud (11.1ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 53) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 53) [0m
+Rendered stories/_opinion (1.7ms)
+Rendered stories/_story (0.5ms)
+  [4;35;1mStoryTag Load (0.6ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 51) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 15) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 16) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 17) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 18) [0m
+Rendered stories/_social_tag_cloud (7.6ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 51) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 51) [0m
+Rendered stories/_opinion (1.5ms)
+  [4;36;1mVote Load (1.4ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id,created_at ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;35;1mVote Load (1.4ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id,created_at ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 36) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 35) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 35) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 42) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 40) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 43) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 44) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 36) [0m
+Completed in 235ms (View: 109, DB: 20) | 200 OK [http://localhost/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-26 20:42:04) [GET]
+  [4;36;1mSport Load (1.0ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (1.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+Rendered stories/_story (5.7ms)
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 58) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 40) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 42) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 43) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 44) [0m
+Rendered stories/_social_tag_cloud (19.6ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 58) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".story_id = 58) ORDER BY comments.id DESC LIMIT 1[0m
+Rendered stories/_opinion (8.4ms)
+Rendered stories/_story (0.5ms)
+  [4;35;1mStoryTag Load (0.8ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 56) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 35) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 36) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 37) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 38) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 39) [0m
+Rendered stories/_social_tag_cloud (9.6ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 56) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".story_id = 56) ORDER BY comments.id DESC LIMIT 1[0m
+Rendered stories/_opinion (2.7ms)
+Rendered stories/_story (0.5ms)
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 55) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 30) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 31) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 32) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 33) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 34) [0m
+Rendered stories/_social_tag_cloud (9.3ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 55) [0m
+Rendered stories/_opinion (1.6ms)
+Rendered stories/_story (0.5ms)
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 54) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 25) [0m
+  [4;36;1mSocialTag Load (0.8ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 26) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 27) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 28) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 29) [0m
+Rendered stories/_social_tag_cloud (10.6ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 54) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 54) [0m
+Rendered stories/_opinion (1.6ms)
+Rendered stories/_story (0.5ms)
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 53) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 19) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 20) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 21) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 22) [0m
+  [4;35;1mSocialTag Load (0.4ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 23) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 24) [0m
+Rendered stories/_social_tag_cloud (12.0ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 53) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 53) [0m
+Rendered stories/_opinion (1.6ms)
+Rendered stories/_story (0.5ms)
+  [4;35;1mStoryTag Load (0.6ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 51) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 15) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 16) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 17) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 18) [0m
+Rendered stories/_social_tag_cloud (7.6ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 51) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 51) [0m
+Rendered stories/_opinion (1.6ms)
+  [4;36;1mVote Load (1.4ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id,created_at ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;35;1mVote Load (1.4ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id,created_at ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 36) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 35) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 35) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 42) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 40) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 43) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 44) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 36) [0m
+Completed in 231ms (View: 109, DB: 20) | 200 OK [http://localhost/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-26 20:55:14) [GET]
+  [4;36;1mSport Load (0.9ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (1.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+Rendered stories/_story (5.7ms)
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 58) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 40) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 42) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 43) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 44) [0m
+Rendered stories/_social_tag_cloud (19.7ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 58) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".story_id = 58) ORDER BY comments.id DESC LIMIT 1[0m
+Rendered stories/_opinion (8.2ms)
+Rendered stories/_story (0.5ms)
+  [4;35;1mStoryTag Load (0.8ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 56) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 35) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 36) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 37) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 38) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 39) [0m
+Rendered stories/_social_tag_cloud (9.8ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 56) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".story_id = 56) ORDER BY comments.id DESC LIMIT 1[0m
+Rendered stories/_opinion (2.7ms)
+Rendered stories/_story (0.5ms)
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 55) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 30) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 31) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 32) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 33) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 34) [0m
+Rendered stories/_social_tag_cloud (9.3ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 55) [0m
+Rendered stories/_opinion (1.6ms)
+Rendered stories/_story (0.5ms)
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 54) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 25) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 26) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 27) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 28) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 29) [0m
+Rendered stories/_social_tag_cloud (9.4ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 54) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 54) [0m
+Rendered stories/_opinion (2.2ms)
+Rendered stories/_story (0.5ms)
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 53) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 19) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 20) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 21) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 22) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 23) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 24) [0m
+Rendered stories/_social_tag_cloud (11.2ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 53) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 53) [0m
+Rendered stories/_opinion (1.5ms)
+Rendered stories/_story (0.5ms)
+  [4;35;1mStoryTag Load (0.6ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 51) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 15) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 16) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 17) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 18) [0m
+Rendered stories/_social_tag_cloud (7.9ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 51) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 51) [0m
+Rendered stories/_opinion (1.5ms)
+  [4;36;1mVote Load (1.5ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id,created_at ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;35;1mVote Load (1.4ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id,created_at ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 36) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 35) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 35) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 42) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 40) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 43) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 44) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 36) [0m
+Completed in 231ms (View: 109, DB: 20) | 200 OK [http://localhost/]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-03-26 20:58:04) [GET]
+  [4;36;1mSport Load (0.9ms)[0m   [0;1mSELECT * FROM "sports" [0m
+Rendering template within layouts/application
+Rendering stories/index
+  [4;35;1mStory Load (1.5ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."accepted" = 't' AND "stories"."published" = 't') ORDER BY published_at DESC[0m
+Rendered stories/_story (5.6ms)
+  [4;36;1mStoryTag Load (0.8ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 58) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 40) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 42) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 43) [0m
+  [4;35;1mSocialTag Load (0.4ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 44) [0m
+Rendered stories/_social_tag_cloud (20.7ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 58) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".story_id = 58) ORDER BY comments.id DESC LIMIT 1[0m
+Rendered stories/_opinion (8.5ms)
+Rendered stories/_story (0.5ms)
+  [4;35;1mStoryTag Load (0.7ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 56) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 35) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 36) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 37) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 38) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 39) [0m
+Rendered stories/_social_tag_cloud (9.7ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 56) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".story_id = 56) ORDER BY comments.id DESC LIMIT 1[0m
+Rendered stories/_opinion (2.8ms)
+Rendered stories/_story (0.5ms)
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 55) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 30) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 31) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 32) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 33) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 34) [0m
+Rendered stories/_social_tag_cloud (9.7ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 55) [0m
+Rendered stories/_opinion (2.0ms)
+Rendered stories/_story (0.5ms)
+  [4;36;1mStoryTag Load (0.7ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 54) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 25) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 26) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 27) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 28) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 29) [0m
+Rendered stories/_social_tag_cloud (9.5ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 54) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 54) [0m
+Rendered stories/_opinion (1.7ms)
+Rendered stories/_story (0.6ms)
+  [4;36;1mStoryTag Load (0.9ms)[0m   [0;1mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 53) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 19) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 20) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 21) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 22) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 23) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 24) [0m
+Rendered stories/_social_tag_cloud (11.5ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 53) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 53) [0m
+Rendered stories/_opinion (1.6ms)
+Rendered stories/_story (0.5ms)
+  [4;35;1mStoryTag Load (0.6ms)[0m   [0mSELECT * FROM "story_tags" WHERE ("story_tags".story_id = 51) [0m
+  [4;36;1mSocialTag Load (0.3ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 15) [0m
+  [4;35;1mSocialTag Load (0.3ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 16) [0m
+  [4;36;1mSocialTag Load (0.2ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 17) [0m
+  [4;35;1mSocialTag Load (0.2ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 18) [0m
+Rendered stories/_social_tag_cloud (7.6ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 51) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".story_id = 51) [0m
+Rendered stories/_opinion (1.6ms)
+  [4;36;1mVote Load (1.5ms)[0m   [0;1mSELECT * FROM "votes" GROUP BY story_id,created_at ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mStory Load (0.4ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;36;1mStory Load (0.4ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "stories" WHERE ("stories"."id" = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "stories" WHERE ("stories"."id" = 56) [0m
+  [4;35;1mVote Load (1.4ms)[0m   [0mSELECT * FROM "votes" GROUP BY social_tag_id,created_at ORDER BY created_at DESC LIMIT 10[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 36) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 35) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 35) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 42) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 40) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 43) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 41) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 44) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "social_tags" WHERE ("social_tags"."id" = 36) [0m
+Completed in 234ms (View: 199, DB: 20) | 200 OK [http://localhost/]

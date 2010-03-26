@@ -6,11 +6,11 @@ class Vote < ActiveRecord::Base
   
   after_save :aggregate_votes
   
-  #named_scope :popular_stories, :group => 'story_id,', :order=> "created_at DESC", :limit=>10
-  #named_scope :popular_tags, :group => 'social_tag_id,' , :order=> "created_at DESC" ,:limit=>10
+  named_scope :popular_stories, :group => 'story_id,created_at', :order=> "created_at DESC", :limit=>10
+  named_scope :popular_tags, :group => 'social_tag_id,created_at' , :order=> "created_at DESC" ,:limit=>10
   
-  named_scope :popular_stories,:select => 'DISTINCT story_id,created_at,id',  :order=> "created_at DESC", :limit=>10
-  named_scope :popular_tags, :select => 'DISTINCT social_tag_id,created_at',  :order=> "created_at DESC" ,:limit=>10
+  #named_scope :popular_stories,:select => 'DISTINCT story_id,created_at,id',  :order=> "created_at DESC", :limit=>10
+  #named_scope :popular_tags, :select => 'DISTINCT ',  :order=> "created_at DESC" ,:limit=>10
   
   
   
@@ -24,6 +24,18 @@ class Vote < ActiveRecord::Base
           self.story_tag.vote_down
           self.story.vote_down
       end  
-  end  
+  end
+  
+  #def popular_stories(days = 7)
+  #   votes = Votes.all
+  #end
+  
+  #def popular_tags(days = 7)
+  #  votes = Votes.all
+    
+  #end
+  
+ 
+      
   
 end
