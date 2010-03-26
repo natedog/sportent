@@ -1,1 +1,50 @@
-show me the social tag <%=@social_tag.name%>
+
+<h1> <%=@social_tag.name%> stories and Trends </h1>
+
+<p>
+	<div id="chart"></div>
+	
+	<%= Seer::visualize(
+	      @social_tag.votes, 
+	      :as => :column_chart,
+	      :in_element =>'chart', 
+	      :series => {:series_label => 'created_at', :data_method => 'sentiment'},
+	      :chart_options => {
+	        :height => 300,
+	        :width => 100 *@social_tag.votes.size ,
+	        :is_3_d => true,
+	        :legend => 'none',
+	        :colors => "[{color:'#990000', darker:'#660000'}]",
+	        :title => @social_tag.name+" Activity",
+	        :title_x => 'last 7 Days',
+	        :title_y => 'Sentiment'
+	      }
+	    )
+	 -%>
+</p>
+
+<% @stories.each do |story| %>
+  <div class="story">
+		
+		<div class="details">
+
+			<%= render :partial => "stories/story", :locals => {:story=>story ,:dock=>false}%>
+
+			
+			<%= render :partial => "stories/social_tag_cloud", :locals => {:story_tags=>story.story_tags}%>
+			
+			<%= render :partial => "stories/opinion", :locals => {:story=>story ,:dock=>false}%>
+			<div class="scorecastr">Pick the Score</div>
+			
+		</div>
+		
+
+		
+	</div>			
+		
+ 
+<% end %>
+
+<% content_for :head do %>
+	<%= Seer::init_visualization -%>
+<% end %>

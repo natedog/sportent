@@ -6,7 +6,7 @@
 	<%= stylesheet_link_tag "web_app_theme", "web_app_theme_override", "themes/default/style", :cache => true %>
 	<%= stylesheet_link_tag "formtastic" %>
   <%= stylesheet_link_tag "formtastic_changes" %>
-  
+   <%= yield :head %>
 </head>
 <body>
   <div id="container">

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100319112550) do
+ActiveRecord::Schema.define(:version => 20100326112634) do
 
   create_table "comments", :force => true do |t|
     t.text     "opinion"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20100319112550) do
     t.datetime "updated_at"
     t.integer  "sport_id"
     t.text     "name"
-    t.integer  "votes"
+    t.integer  "total_votes"
     t.integer  "score"
   end
 
@@ -60,14 +60,14 @@ ActiveRecord::Schema.define(:version => 20100319112550) do
     t.datetime "published_at"
     t.datetime "accepted_at"
     t.datetime "original_publish_at"
-    t.integer  "votes"
+    t.integer  "total_votes"
     t.integer  "score"
   end
 
   create_table "story_tags", :force => true do |t|
     t.integer  "story_id"
     t.integer  "social_tag_id"
-    t.integer  "votes"
+    t.integer  "total_votes"
     t.integer  "score"
     t.datetime "created_at"
     t.datetime "updated_at"
