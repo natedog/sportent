@@ -9,8 +9,8 @@ class Vote < ActiveRecord::Base
   #named_scope :popular_stories, :group => 'story_id,social_tag_id,story_tag_id,sport_id,id,sentiment,created_at,updated_at', :order=> "created_at DESC", :limit=>10
   #named_scope :popular_tags, :group => 'social_tag_id,story_id,story_tag_id,sport_id,id,sentiment,created_at,updated_at' , :order=> "created_at DESC" ,:limit=>10
   
-  named_scope :popular_stories,:select => 'DISTINCT ON (story_id) story_id,created_at,id',   :limit=>10
-  named_scope :popular_tags, :select => 'DISTINCT ON (social_tag_id) social_tag_id,created_at,id',  :limit=>10
+  named_scope :popular_stories,:select => 'DISTINCT ON (story_id) story_id,created_at,id',  :order=> "story_id,created_at DESC", :limit=>10
+  named_scope :popular_tags, :select => 'DISTINCT ON (social_tag_id) social_tag_id,created_at,id',  :order=> "social_tag_id,created_at DESC" ,:limit=>10
   
   
   
@@ -26,14 +26,7 @@ class Vote < ActiveRecord::Base
       end  
   end
   
-  #def popular_stories(days = 7)
-  #   votes = Votes.all
-  #end
-  
-  #def popular_tags(days = 7)
-  #  votes = Votes.all
-    
-  #end
+
   
  
       
