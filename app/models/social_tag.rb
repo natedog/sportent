@@ -3,6 +3,7 @@ class SocialTag < ActiveRecord::Base
   has_many :story_tags
   has_many :votes
   belongs_to :sport
+  #before_create :if_exists
   
   
   def vote_up
@@ -16,6 +17,14 @@ class SocialTag < ActiveRecord::Base
     self.score = self.score.to_i-1
     self.save
   end
+  
+  def if_exists
+    name = self.name
+    sport = self.sport
+    
+    existing_tag = SocialTag.find(:first,:conditions => "name = '#{name}' AND sport_id='#{sport.id}'")
+    
+  end  
   
 
   

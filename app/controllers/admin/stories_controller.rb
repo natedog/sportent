@@ -135,10 +135,16 @@ class Admin::StoriesController < Admin::BaseController
      
      social_tags.each do |tag|
         
+        
         social_tag = SocialTag.new
         social_tag.name = tag
         social_tag.sport = @story.sport
-        social_tag.save
+        exists = social_tag.if_exists 
+        if  exists == nil
+          social_tag.save
+        else
+          social_tag = exists
+        end  
         
         @story.social_tags << social_tag
          
