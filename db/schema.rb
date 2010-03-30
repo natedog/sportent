@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100326112634) do
+ActiveRecord::Schema.define(:version => 20100330105956) do
 
   create_table "comments", :force => true do |t|
     t.text     "opinion"
@@ -37,6 +37,9 @@ ActiveRecord::Schema.define(:version => 20100326112634) do
     t.text     "name"
     t.integer  "total_votes"
     t.integer  "score"
+    t.integer  "total_cheers"
+    t.integer  "total_jeers"
+    t.integer  "total_activity"
   end
 
   create_table "sports", :force => true do |t|
@@ -62,6 +65,9 @@ ActiveRecord::Schema.define(:version => 20100326112634) do
     t.datetime "original_publish_at"
     t.integer  "total_votes"
     t.integer  "score"
+    t.integer  "total_cheers"
+    t.integer  "total_jeers"
+    t.integer  "total_activity"
   end
 
   create_table "story_tags", :force => true do |t|
@@ -72,6 +78,9 @@ ActiveRecord::Schema.define(:version => 20100326112634) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "sport_id"
+    t.integer  "total_cheers"
+    t.integer  "total_jeers"
+    t.integer  "total_activity"
   end
 
   create_table "votes", :force => true do |t|
@@ -82,6 +91,9 @@ ActiveRecord::Schema.define(:version => 20100326112634) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "story_tag_id"
+    t.integer  "total_cheers"
+    t.integer  "total_jeers"
+    t.integer  "total_activity"
   end
 
 end
