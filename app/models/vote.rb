@@ -14,30 +14,34 @@ class Vote < ActiveRecord::Base
   
   
   
-  def aggregate_votes(choice)
+  def aggregate(choice)
       
       if choice == "cheer"
         self.cheer
       elsif choice == "jeer"  
-        self.cheer
-      else  
-        self.activity
+        self.jeer
       end  
-      
+        self.activity
   end
   
   def cheer
-    
+      self.total_social_tag_cheers = self.social_tag.cheer
+      self.total_story_tag_cheers = self.story_tag.cheer
+      self.total_story_cheers = self.story.cheer
   
   end
   
   def jeer
-      
+      self.total_social_tag_jeers = self.social_tag.jeer
+      self.total_story_tag_jeers = self.story_tag.jeer
+      self.total_story_jeers = self.story.jeer      
   
   end
   
   def activity
-      
+    self.total_social_tag_activity = self.social_tag.activity
+    self.total_story_tag_activity = self.story_tag.activity
+    self.total_story_activity = self.story.activity      
   
   end
       

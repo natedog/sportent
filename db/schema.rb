@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100330105956) do
+ActiveRecord::Schema.define(:version => 20100401120831) do
 
   create_table "comments", :force => true do |t|
     t.text     "opinion"
@@ -91,9 +91,15 @@ ActiveRecord::Schema.define(:version => 20100330105956) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "story_tag_id"
-    t.integer  "total_cheers"
-    t.integer  "total_jeers"
-    t.integer  "total_activity"
+    t.integer  "total_story_cheers"
+    t.integer  "total_story_jeers"
+    t.integer  "total_story_activity"
+    t.integer  "total_social_tag_cheers"
+    t.integer  "total_social_tag_jeers"
+    t.integer  "total_social_tag_activity"
+    t.integer  "total_story_tag_cheers"
+    t.integer  "total_story_tag_jeers"
+    t.integer  "total_story_tag_activity"
   end
 
 end

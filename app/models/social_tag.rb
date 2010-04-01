@@ -6,16 +6,23 @@ class SocialTag < ActiveRecord::Base
   #before_create :if_exists
   
   
-  def vote_up
-      self.total_votes = self.total_votes.to_i+1
-      self.score = self.score.to_i+1
+  def cheer
+      self.total_cheers = self.total_cheers.to_i+1
       self.save
+      self.total_cheers
   end
 
-  def vote_down
-    self.total_votes = self.total_votes.to_i+1
-    self.score = self.score.to_i-1
+  def jeer
+    self.total_jeers = self.total_jeers.to_i+1
     self.save
+    self.total_jeers
+  end
+  
+  def activity
+    self.total_activity = self.total_activity.to_i+1
+    self.save
+    self.total_activity
+    
   end
   
   def if_exists

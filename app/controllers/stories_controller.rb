@@ -103,22 +103,19 @@ class StoriesController < ApplicationController
   def vote
      
      story_tag = StoryTag.find(params[:id])
-     sentiment = params[:choice]
+     choice = params[:choice]
      
-     if sentiment == "up"
-        sentiment =  1
-     else
-        sentiment =  -1
-     end        
+       
      
      vote = Vote.new do |v|  
           v.story = story_tag.story
           v.social_tag = story_tag.social_tag
-          v.sentiment = sentiment
           v.sport = story_tag.sport
           v.story_tag = story_tag
+          
+          
      end
-     
+     vote.aggregate(choice)
      vote.save
      
      respond_to do |format|
