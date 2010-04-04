@@ -1,27 +1,32 @@
 
 <h1> <%=@social_tag.name%> stories and Trends </h1>
 
-<p>
-	<div id="chart"></div>
+<div class="trending">
+	<div class="activity">
+		Activity
+		<div>
+			This week
+			<%=@social_tag.activity_this_week %> /
+			<%=@social_tag.activity_last_week%>
+			
+			
+		</div>
+		
+		<div>
+			All time
+			
+		</div>
+	</div>
 	
-	<%= Seer::visualize(
-	      @social_tag.votes, 
-	      :as => :column_chart,
-	      :in_element =>'chart', 
-	      :series => {:series_label => 'created_at', :data_method => 'sentiment'},
-	      :chart_options => {
-	        :height => 300,
-	        :width => 100 *@social_tag.votes.size ,
-	        :is_3_d => true,
-	        :legend => 'none',
-	        :colors => "[{color:'#990000', darker:'#660000'}]",
-	        :title => @social_tag.name+" Activity",
-	        :title_x => 'last 7 Days',
-	        :title_y => 'Sentiment'
-	      }
-	    )
-	 -%>
-</p>
+	<div class="cheers">
+		Cheers
+	</div>
+	
+	<div class="jeers">
+		Jeers
+	</div>	
+
+</div>
 
 <% @stories.each do |story| %>
   <div class="story">

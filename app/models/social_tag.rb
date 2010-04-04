@@ -33,6 +33,28 @@ class SocialTag < ActiveRecord::Base
     
   end  
   
-
+  def activity_this_week
+      self.total_activity-self.activity_last_week
+  end 
+  
+  def activity_last_week
+       activity_last_week = Vote.social_tags(self.id).totals_last_week.first
+       if activity_last_week != nil
+          activity_last_week.total_social_tag_activity-self.activity_last_fortnight        
+        else
+          activity_last_week = 0
+       end     
+        
+  end 
+  
+  def activity_last_fortnight
+       activity_last_fortnight = Vote.social_tags(self.id).totals_last_fortnight.first
+       if activity_last_fortnight != nil
+          activity_last_fortnight.total_social_tag_activity        
+        else
+          activity_last_fortnight = 0
+       end     
+        
+  end
   
 end

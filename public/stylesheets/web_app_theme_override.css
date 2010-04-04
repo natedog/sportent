@@ -121,4 +121,35 @@ div.story_score{
 	float:right;
 	
 }
+
+div.trending{
+	height :100px;
+	padding:10px;
+	margin:10px;
+}
+
+div.trending div {
+	float:left;
+	height:80px;
+	width:180px;
+	text-align:center;
+	font-weight:bold;	
+	
+}
+
+div.trending div.cheers {
+
+	border-right: solid 1px #CCCCCC;
+}
+
+div.trending div.activity {
+
+	border-right: solid 1px #CCCCCC;
+	
+}
+
+div.trending div.jeers {
+	
+}
+
 	
