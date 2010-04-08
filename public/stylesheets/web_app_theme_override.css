@@ -133,7 +133,8 @@ div.trending div {
 	height:80px;
 	width:180px;
 	text-align:center;
-	font-weight:bold;	
+	font-weight:bold;
+	padding:5px;	
 	
 }
 
@@ -151,5 +152,23 @@ div.trending div.activity {
 div.trending div.jeers {
 	
 }
+
+div.trending div div.score{
+	height:auto !important;
+	float:left;
+}
+
+div.trending div div.this_week{
+	width:50%;
+	
+	
+}
+
+div.trending div div.all_time{
+	width:30%;
+	text-align:right;
+	
+}
+
 
 	

@@ -3,27 +3,54 @@
 
 <div class="trending">
 	<div class="activity">
-		Activity
-		<div>
-			This week
-			<%=@social_tag.activity_this_week %> /
-			<%=@social_tag.activity_last_week%>
+		Activity<br/>
+		<div class="score this_week">
+			This Week
+			<%=@social_tag.activity_this_week%> 
 			
-			
+			<span> Last week
+				<%=@social_tag.activity_last_week%>
+			</span>
 		</div>
 		
-		<div>
+		<div class="score all_time">
 			All time
-			
+			(<%=@social_tag.total_activity%>)
 		</div>
 	</div>
 	
 	<div class="cheers">
-		Cheers
+		Cheers<br/>
+		<div class="score this_week">
+			This Week
+			<%=@social_tag.cheers_this_week%> 
+			
+			<span> Last week
+				<%=@social_tag.cheers_last_week%>
+			</span>
+		</div>
+		
+		<div class="score all_time">
+			All time
+			(<%=@social_tag.total_cheers%>)
+		</div>
 	</div>
 	
 	<div class="jeers">
-		Jeers
+		Jeers<br/>
+		<div class="score this_week">
+			This Week
+			<%=@social_tag.activity_this_week%> 
+			
+			<span> Last week
+				<%=@social_tag.activity_last_week%>
+			</span>
+		</div>
+		
+		<div class="score all_time">
+			All time
+			(<%=@social_tag.total_activity%>)
+		</div>
 	</div>	
 
 </div>
