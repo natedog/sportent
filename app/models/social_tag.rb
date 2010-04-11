@@ -93,5 +93,29 @@ class SocialTag < ActiveRecord::Base
        end             
   end
   
+  def jeers_this_week
+      totals_this_week.total_social_tag_jeers-jeers_last_week
+  end 
+  
+  def jeers_last_week
+      
+      if totals_last_week != nil
+        totals_last_week.total_social_tag_jeers-jeers_last_fortnight
+      else
+         totals_last_week = 0
+      end    
+    
+        
+  end 
+  
+  def jeers_last_fortnight
+       
+       if totals_last_fortnight != nil
+         totals_last_fortnight.total_social_tag_jeers 
+       else
+         totals_last_fortnight = 0
+       end             
+  end
+  
   
 end

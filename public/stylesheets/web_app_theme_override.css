@@ -170,5 +170,25 @@ div.trending div div.all_time{
 	
 }
 
+div.social_opinion{
+	clear:both;
+}
+
+div.comment{
+	margin:3px 0px;
+	border: solid 1px #CCC;
+	
+}
+
+div.comment_header{
+	padding:3px;
+	background-color: #CCC;
+} 
+
+div.comment_text{
+	padding:10px;
+	
+}
+
 
 	
