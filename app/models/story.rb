@@ -5,7 +5,7 @@ class Story < ActiveRecord::Base
     has_many :story_tags
     has_many :comments
     
-    named_scope :accepted, :conditions=> {:accepted=> true, :published=> nil}, :order=> "published_at DESC"
+    named_scope :accepted, :conditions=> {:accepted=> true, :published=> nil}, :order=> "accepted_at DESC"
     named_scope :published, :conditions=> {:accepted=> true, :published=>true} , :order=> "published_at DESC"
     named_scope :sport, lambda {|*args| {:conditions=>{:sport_id => args.first || "1"}}}
     

@@ -1,8 +1,13 @@
-<h1>Submit a story</h1>
+<h1>Submit your story</h1>
 
 <% semantic_form_for @story do |form| %>
-  <%= form.inputs %>
-  <%= form.buttons %>
+    <% form.inputs :name=> ""  do%>
+    <%= form.input :sport, :label => "Select  sport" %>
+    <%= form.input :url %>
+	<%= form.input :title %>
+	<%= form.input :summary %>
+    <%= form.buttons %>
+  <% end %>	
 <% end %>
 
 <%= link_to 'Back', stories_path %>

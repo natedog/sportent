@@ -7,7 +7,7 @@
 		<th>Title</th>
 		<th>Sport</th>
 		<th>Qued for</th>
-		<th>Published </th>
+
 		<th>Delete</th>
 		<th>Publish</th>
   </tr>
@@ -18,7 +18,7 @@
 		<td><%=story.title%></td>
 		<td><%=story.sport.name%></td>
 		<td><%=time_ago_in_words(story.accepted_at)%></td>
-		<td><%=time_ago_in_words(story.original_publish_at)%></td>
+
 		<td><%= link_to "Destroy", admin_story_path(story), :method=> "delete"
 	  %></td>
 		<td><%= link_to "Publish",  publish_admin_story_path(story) %></td>

@@ -4,7 +4,8 @@
 <p><strong><%=time_ago_in_words(@story.original_publish_at)%> ago</strong></p>
 <h4>Semantic Tagging</h4>
 <% form_for(:story, :url => { :action=>"save_published" }) do |f| %>
-<table class="feedtable">
+<strong>Select 5 Tags from below</strong>
+<table class="feedtable">	
  <tr class="headerrow">
 	<th>Keywords</th>
 	<th>Entities</th>

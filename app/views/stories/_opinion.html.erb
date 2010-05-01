@@ -3,17 +3,17 @@
 		<%=story.comments.last.opinion%>
 		<% if dock = true %>
 			
-			| <%=link_to "Have your Say", opinion_story_path(story),:target=>"_top"%> | <%=link_to "View All",  opinion_view_story_path(story),:target=>"_top"%>
+			| <%=link_to "Comments", opinion_story_path(story),:target=>"_top"%> 
 			</p>
 		<% else %>
 			</p>
-			<%=link_to "Have your Say", opinion_story_path(story)%> | <%=link_to "View All",  opinion_view_story_path(story)%>
+			<%=link_to "Comments", opinion_story_path(story)%> 
 		<% end %>
 		
 		
 	<% else%>
 		
-		<%=link_to "Be the first to have an Opinion", opinion_story_path(story)%> 	</p>
+		<%=link_to "What do you think ?", opinion_story_path(story)%> 	</p>
 		
 	<% end %>
 	 

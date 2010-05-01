@@ -1,4 +1,8 @@
 class StoriesController < ApplicationController
+  
+  before_filter :login_required, :only => [:new, :create, :vote, :opinion_save]
+
+  
   # GET /stories
   # GET /stories.xml
   def index
@@ -58,12 +62,16 @@ class StoriesController < ApplicationController
   # POST /stories.xml
   def create
     @story = Story.new(params[:story])
-
+    @story.source_type = "user"
+    @story.accepted = true
+    @story.published = nil
+    @story.original_publish_at = DateTime.now
+    @story.accepted_at = DateTime.now
     respond_to do |format|
       if @story.save
-        flash[:notice] = 'Story was successfully created.'
-        format.html { redirect_to(@story) }
-        format.xml  { render :xml => @story, :status => :created, :location => @story }
+        flash[:notice] = 'Your Story. '+@story.title+'. <p>Has been submited.</p>'
+        format.html { redirect_to("/") }
+        #format.xml  { render :xml => @story, :status => :created, :location => @story }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @story.errors, :status => :unprocessable_entity }
@@ -71,34 +79,7 @@ class StoriesController < ApplicationController
     end
   end
 
-  # PUT /stories/1
-  # PUT /stories/1.xml
-  def update
-    @story = Story.find(params[:id])
 
-    respond_to do |format|
-      if @story.update_attributes(params[:story])
-        flash[:notice] = 'Story was successfully updated.'
-        format.html { redirect_to(@story) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @story.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /stories/1
-  # DELETE /stories/1.xml
-  def destroy
-    @story = Story.find(params[:id])
-    @story.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(stories_url) }
-      format.xml  { head :ok }
-    end
-  end
   
   def vote
      
@@ -120,8 +101,8 @@ class StoriesController < ApplicationController
      
      respond_to do |format|
        
-      flash[:notice] = 'Your vote has been added.'
-       format.html { redirect_to(stories_url) }
+      flash[:notice] = 'Your '+choice.capitalize+' for '+story_tag.social_tag.name+' has been registered.'
+       format.html { redirect_to(params[:return_to]) }
        format.xml  { head :ok }
      end 
     

@@ -7,7 +7,7 @@
 <% else %>
 <h2><%= story.title %></h2>
 <% end %>
-<%=story.published_at.to_s%>
+<%=time_ago_in_words(story.published_at.to_s)%> ago
 
 
 	

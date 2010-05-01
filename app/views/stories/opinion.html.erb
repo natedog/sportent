@@ -7,19 +7,22 @@
 <div class="social_opinion">
 <br/>	
 
-<h4>Have your Say</h4>
-<% form_for ( @story.comments.new, :url => { :action=>"opinion_save" }) do |f| %>
-	<%=f.text_area("opinion",  :class => "opinion") %>
-	 <%= submit_tag 'Submit' %>
-<% end %>
-</div>
 
-<h2>Other Opinions:</h2>
+
+<h2>Comments</h2>
+<p><a href="#comment">Post your Opinion</a></p>
 	<% @story.comments.each do |opinion| %>
 		<div class="comment">
 			<div class="comment_header">Anonymous posted on <%=time_ago_in_words(opinion.created_at)%></div>
 				<div class="comment_text"><%=opinion.opinion%></div>
 		</div>
 	<% end %>
+	
+	<h4>Have your Say</h4><a name="comment"></a>
+	<% form_for ( @story.comments.new, :url => { :action=>"opinion_save" }) do |f| %>
+		<%=f.text_area("opinion",  :class => "opinion") %>
+		 <%= submit_tag 'Submit' %>
+	<% end %>
+	</div>	
 	
 </div>	

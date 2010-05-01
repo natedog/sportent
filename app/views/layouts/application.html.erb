@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>imsportant.com</title>
+	<title>cheerr.com</title>
 	<%= stylesheet_link_tag "web_app_theme", "web_app_theme_override", "themes/default/style", :cache => true %>
 	<%= stylesheet_link_tag "formtastic" %>
   <%= stylesheet_link_tag "formtastic_changes" %>
@@ -11,11 +11,11 @@
 <body>
   <div id="container">
     <div id="header">
-      <h1><a href="/">imsportant.com</a></h1>
+      <h1><a href="/">cheerr.com</a></h1>
       <div id="user-navigation">
         <ul class="wat-cf">
-          <li><a href="#"><%= t("web-app-theme.profile", :default => "Profile") %></a></li>
-          <li><a href="#"><%= t("web-app-theme.settings", :default => "Settings") %></a></li>
+          <li><a href="/submit"><%= t("web-app-theme.profile", :default => "Submit Story") %></a></li>
+		  <li><a href="#"><%= t("web-app-theme.profile", :default => "Profile") %></a></li>
           <li><a href="/logout" class="logout"><%= t("web-app-theme.logout", :default => "Logout") %></a></li>
         </ul>
       </div>      

@@ -7,6 +7,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :rssfeeds
   map.resources :social_tags
   map.vote '/vote/:id/:choice' , :controller=> 'stories', :action=> 'vote',:conditions => { :method => :get }  
+  map.submit_story '/submit'   , :controller=> 'stories', :action=> 'new' 
   #map.trend '/t/:sport/:social_tag', :controller=> 'social_tags', :action=>"show"
   #map.trends '/t/:sport', :controller=> 'social_tags', :action=>"index"
   
