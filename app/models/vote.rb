@@ -5,16 +5,16 @@ class Vote < ActiveRecord::Base
   belongs_to :story_tag
   
   
-  #named_scope :popular_stories, :group => 'story_id', :order=> "created_at DESC", :limit=>10
-  #named_scope :popular_tags, :group => 'social_tag_id' , :order=> "created_at DESC" ,:limit=>10
+  named_scope :popular_stories, :group => 'story_id', :order=> "created_at DESC", :limit=>10
+  named_scope :popular_tags, :group => 'social_tag_id' , :order=> "created_at DESC" ,:limit=>10
   
   named_scope :totals_last_week,  :conditions => ['created_at >= :lastweek  AND created_at < :six_days' , {:lastweek=> 1.week.ago,:six_days=>6.day.ago}], :order=> "created_at DESC"  ,:limit=>1 
   named_scope :totals_last_fortnight,  :conditions => ['created_at >= :last_fortnight  AND created_at < :thirteen_days' , {:last_fortnight=> 2.week.ago,:thirteen_days=>13.day.ago}], :order=> "created_at DESC"  ,:limit=>1   
   
   named_scope :social_tags, lambda {|*args| {:conditions=>{:social_tag_id => args.first || "1"}}}
   
-  named_scope :popular_stories,:select => 'DISTINCT ON (story_id) story_id,created_at,id',  :order=> "story_id,created_at DESC", :limit=>10
-  named_scope :popular_tags, :select => 'DISTINCT ON (social_tag_id) social_tag_id,created_at,id',  :order=> "social_tag_id,created_at DESC" ,:limit=>10
+  #named_scope :popular_stories,:select => 'DISTINCT ON (story_id) story_id,created_at,id',  :order=> "story_id,created_at DESC", :limit=>10
+  #named_scope :popular_tags, :select => 'DISTINCT ON (social_tag_id) social_tag_id,created_at,id',  :order=> "social_tag_id,created_at DESC" ,:limit=>10
   
   
   
@@ -34,6 +34,7 @@ class Vote < ActiveRecord::Base
         self.jeer
       end  
         self.activity
+           
   end
   
   def cheer

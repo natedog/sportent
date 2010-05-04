@@ -29,6 +29,19 @@ class Story < ActiveRecord::Base
 
     end
     
+    def shorten
+      
+      
+      shortener = Bitly.new('cheerr', 'R_a37e4a40da2312342882685eeddccbfc')
+      short_url = shortener.shorten('http://cheerr.heroku.com/stories/'+self.id.to_s)  
+      short_url.jmp_url
+      
+    end  
+    
+    def short_url
+      shorten
+    end  
+    
 
 
 end

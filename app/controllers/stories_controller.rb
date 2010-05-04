@@ -99,6 +99,9 @@ class StoriesController < ApplicationController
      vote.aggregate(choice)
      vote.save
      
+     current_user.twitter.post('/statuses/update.json','status'=> choice+'s for '+story_tag.social_tag.name+' '+story_tag.story.short_url)
+     
+     
      respond_to do |format|
        
       flash[:notice] = 'Your '+choice.capitalize+' for '+story_tag.social_tag.name+' has been registered.'
@@ -115,6 +118,10 @@ class StoriesController < ApplicationController
   def opinion_save
     @story = Story.find(params[:id])
     @story.comments.create({:story=>@story,:opinion=>params[:comment][:opinion]})
+    
+    current_user.twitter.post('/statuses/update.json','status'=> params[:comment][:opinion]+' -- '+@story.short_url)
+    
+    
     respond_to do |format|
       
      flash[:notice] = 'Your opinion has been added.'
