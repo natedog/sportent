@@ -24,6 +24,7 @@ Rails::Initializer.run do |config|
   config.gem 'seer'
   config.gem 'twitter-auth', :lib => 'twitter_auth'
   config.gem 'bitly'
+  config.gem 'will_paginate'
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]

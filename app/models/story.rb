@@ -9,6 +9,9 @@ class Story < ActiveRecord::Base
     named_scope :published, :conditions=> {:accepted=> true, :published=>true} , :order=> "published_at DESC"
     named_scope :sport, lambda {|*args| {:conditions=>{:sport_id => args.first || "1"}}}
     
+    cattr_reader :per_page
+    @@per_page = 10
+    
     
     def cheer
         self.total_cheers = self.total_cheers.to_i+1

@@ -12,7 +12,8 @@ class StoriesController < ApplicationController
       #render " #{sport}"
       @stories = Story.published.sport(@sport.id)
     else     
-      @stories = Story.published
+      @stories = Story.published.paginate :page => params[:page]
+      
     end  
     
     
