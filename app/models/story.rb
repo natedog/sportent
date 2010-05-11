@@ -45,6 +45,17 @@ class Story < ActiveRecord::Base
       shorten
     end  
     
-
+    def socialize
+        Semantify::Semantify.fetch(self.url)
+    end
+    
+    def is_owner(userid)
+        if self.source_type == "user" && self.source.to_i == userid  
+            return true
+        else
+            return false
+        end  
+        
+    end    
 
 end

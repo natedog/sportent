@@ -1,0 +1,34 @@
+<h2><%=@story.title%></h2>
+<h3><%=@story.sport.name%></h3>
+<p><%=@story.summary%></p>
+<p><strong><%=time_ago_in_words(@story.original_publish_at)%> ago</strong></p>
+<h4>Social Tagging</h4>
+<% form_for(:story, :url => { :action=>"socialize_save" }) do |f| %>
+<strong>Select 5 Tags from below</strong>
+<table class="feedtable">	
+ <tr class="headerrow">
+	<th>Keywords</th>
+	<th>Entities</th>
+ </tr>
+<tr>
+	<td>
+		<ul class="list">
+		<% @keywords.each do |keyword| %>
+			<li> <%= check_box_tag "social_tags[tag][]",  keyword %> <%=keyword%>  </li>
+		<% end %>
+		</ul>
+	</td>
+	<td>
+		<ul class="list">
+		<% @entities.each do |tag| %>
+			<li> <%= check_box_tag "social_tags[tag][]",  tag[:tag] %> <%=tag[:tag]%> </li>
+		<% end %>
+		</ul>
+	</td>
+
+</tr>
+</table>
+
+<%= submit_tag 'Publish Story' %>	
+
+<% end %>

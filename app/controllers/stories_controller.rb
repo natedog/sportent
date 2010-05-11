@@ -1,6 +1,6 @@
 class StoriesController < ApplicationController
   
-  before_filter :login_required, :only => [:new, :create, :vote, :opinion_save]
+  before_filter :login_required, :only => [:new, :create, :vote, :opinion_save, :socialize,:socialize_save]
 
   
   # GET /stories
@@ -54,24 +54,23 @@ class StoriesController < ApplicationController
     end
   end
 
-  # GET /stories/1/edit
-  def edit
-    @story = Story.find(params[:id])
-  end
+
 
   # POST /stories
   # POST /stories.xml
   def create
     @story = Story.new(params[:story])
     @story.source_type = "user"
+    @story.source = current_user.id
     @story.accepted = true
     @story.published = nil
     @story.original_publish_at = DateTime.now
     @story.accepted_at = DateTime.now
+    
     respond_to do |format|
       if @story.save
-        flash[:notice] = 'Your Story. '+@story.title+'. <p>Has been submited.</p>'
-        format.html { redirect_to("/") }
+        flash[:notice] = 'Your Story. '+@story.title+'. <p>Has been submited. Please select 5 tags</p>'
+        format.html { redirect_to(socialize_story_path(@story)) }
         #format.xml  { render :xml => @story, :status => :created, :location => @story }
       else
         format.html { render :action => "new" }
@@ -130,5 +129,27 @@ class StoriesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def socialize
+    
+    @story = Story.find(params[:id])
+    if @story.is_owner(current_user.id)
+      semantic_tags = @story.socialize
+      
+      @keywords = semantic_tags[:keywords]
+      @entities = semantic_tags[:entities]
+        
+    else
+      
+      respond_to do |format|
+
+       flash[:error] = 'This story was not added by your login.'
+        format.html { redirect_to("/") }
+        format.xml  { head :ok }
+      end
+    
+    end    
+    
+  end    
   
 end
